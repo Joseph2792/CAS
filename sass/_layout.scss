@@ -1,0 +1,84 @@
+@import "variables";
+
+// esto se puede tomar desde la cdn de google fonts que es gratis
+@font-face {
+    font-family: ‘Roboto-Regular’;
+       //src: url('fonts/ Nombre de la fuente.eot');
+       src: /*url('fonts/ Nombre de la fuente.eot?#iefix') format('embedded-opentype'),
+            url('fonts/ Nombre de la fuente.woff') format('woff'),
+            url('fonts/ Nombre de la fuente.ttf') format('truetype'),*/
+            url('/assets/fonts/Roboto-Regular.ttf') format('svg');
+      font-weight: normal;
+      font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+ul li{
+    list-style: none;
+    margin: 0px;
+}
+
+.clearfloats{ 
+    clear:both;
+}
+
+.cas-body{
+    display: flex;
+    flex-direction: row;
+
+    .navbar{
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        min-width: 300px;        
+    }
+
+    .container-main{
+        height: 100vh;
+        width: 100vw;
+
+        .container-home{
+            padding: 0px 160px 0px 300px;
+            position: relative;
+        }
+        
+        .container-acerca{}
+        .container-sustentabilidad{}
+        .container-productos{}
+        .container-contacto{}
+    }
+
+    .toggle-menu{        
+        width: 160px;
+        height: 100vh;
+        position: fixed;        
+        right: 0;
+        top: 0;
+    }
+}
+
+.title-xxl{
+    position: absolute;
+    font-size: $font-size-large;
+    color: #fff;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+
+    @media screen and (min-width: 700px) {
+        font-size: $font-size-xxlarge;
+    }
+    
+    @media screen and (min-width: 1024px) {
+        font-size: $font-size-xlarge;
+    }
+}

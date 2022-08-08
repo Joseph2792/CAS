@@ -1,0 +1,111 @@
+@import "variables";
+
+.navbar{
+    height: 100vh;
+    min-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    border-right: 1px solid #fff;
+
+    > .container-logo{
+        width: 125px;
+        height: 125px;       
+
+        > .logo-white,
+        > .logo-colour{
+            height: 100%;
+            width: auto;
+        }
+        > .logo-colour{
+            display: none;
+        }
+    }
+
+    > .container-menu{
+        display: none;
+        height: auto;
+        margin: auto;
+
+        @media screen and (min-width: 700px){
+            display: flex;
+        }
+
+        >.menu{
+            margin: 0px;
+            
+            >.item-menu{
+                font-size: $font-size-large;
+                color: #fff;
+                opacity: 0.5;                                
+                cursor: pointer;
+                
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                
+                padding: 10px 0px;
+
+                hr{
+                    width: 50px;                    
+                }
+
+                a{
+                    text-decoration: none;
+                    margin-left: 10px;
+                    color: #fff;
+                }
+
+                &:hover{
+                    opacity: 1;
+                    font-size: 24px;
+
+                    hr{
+                        opacity: 1;
+                        width: 60px;
+                        height: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.toggle-menu{
+    border-left: 1px solid #fff;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .btn-toggle{
+        width: fit-content;
+        height: auto;
+        max-height: 60px;
+        padding: 10px;
+        margin: 0 auto;        
+
+        >i{
+            width: 100%;
+            color: #fff;
+            font-size: 60px;
+            margin: auto;
+        }
+    }
+
+    .txt-menu{
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg); 
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        margin: auto;
+
+        span{
+            color: #fff;
+        }
+    }
+}
