@@ -1,0 +1,17 @@
+@import "variables";
+
+.container-sustentabilidad{
+    width: 100%;
+    height: 100%;
+    
+    background-image: url("/images/background/fondo2.jpg");
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+
+    position: relative;
+}
