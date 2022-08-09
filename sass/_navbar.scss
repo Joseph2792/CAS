@@ -129,13 +129,16 @@
 }
 
 .mobile-menu{
-    background-color: rgba(0,0,0, 0.8);
+    //background-color: rgba(0,0,0, 0.8);
+    background-color: $color-darkgreen;
+
     .container-menu > .menu > .item-menu{
         color: #fff;
     }
 
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1024px) {
         background-color: transparent;
+
         .container-menu > .menu > .item-menu{
             color: #fff;
             opacity: 0.5;

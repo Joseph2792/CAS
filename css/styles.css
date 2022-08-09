@@ -251,12 +251,12 @@ ul li {
 }
 
 .mobile-menu {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #1E3932;
 }
 .mobile-menu .container-menu > .menu > .item-menu {
   color: #fff;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1024px) {
   .mobile-menu {
     background-color: transparent;
   }
@@ -319,7 +319,7 @@ ul li {
   background-size: auto;
   background-position: bottom left;
   animation-name: plantaCreciendo;
-  animation-duration: 10000ms;
+  animation-duration: 50000ms;
   animation-iteration-count: infinite;
 }
 .container-acerca .title-section > .subtitle {
