@@ -3,15 +3,91 @@
 .container-sustentabilidad{
     width: 100%;
     height: 100%;
-    
+
     background-image: url("/images/background/fondo2.jpg");
-    background-position: center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;   
+
+    position: relative;    
+}
+
+.content-sustentabilidad{
+    width: 100%;
+    height: 100%;
 
     display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-    position: relative;
+    background-color: $color-darkgreen;
+
+    .content-sustentabilidad-title,
+    .content-sustentabilidad-info{
+        width: 100%;
+        height: 100%;
+
+        @media  screen and (min-width: 1024px) {
+            width: 50%;
+            padding: 50px;
+        }
+        @media  screen and (min-width: 1366px) {         
+            padding: 60px;
+        }
+        @media  screen and (min-width: 1920px) {         
+            padding: 80px;
+        }
+    }
+
+    .content-sustentabilidad-title{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 30px;
+
+        .title-sustentabilidad{            
+            font-size: 30px;
+            font-weight: 600;
+            display: flex;
+        
+            @media  screen and (min-width: 1024px){
+                font-size: 50px;
+                flex-direction: column;
+            }
+            @media  screen and (min-width: 1366px){
+                font-size: $font-size-xlarge;
+            } 
+
+            p{
+                line-height: normal;
+                color: $color-lightgreen;
+
+                &:first-child{
+                    color: #fff !important;
+                }                
+            }
+        }
+
+        .info-white{
+            color: #fff;
+            font-size: $font-size-medium;
+        }
+
+        .card-info{
+            background-color: rgba(#fff, .1);
+            font-size: $font-size-medium;
+            color: #fff;
+            padding: 20px;
+        }
+    }
+
+    .content-sustentabilidad-info{
+        background-color: #fff;
+        padding: 20px;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+    }    
 }

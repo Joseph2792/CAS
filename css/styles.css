@@ -1,4 +1,321 @@
 @charset "UTF-8";
+.container-contacto {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/background/fondo3.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+  overflow: auto;
+}
+.container-contacto::-webkit-scrollbar {
+  display: none;
+}
+
+.container-sustentabilidad {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/background/fondo2.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+}
+
+.content-sustentabilidad {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #1E3932;
+}
+.content-sustentabilidad .content-sustentabilidad-title,
+.content-sustentabilidad .content-sustentabilidad-info {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .content-sustentabilidad .content-sustentabilidad-title,
+.content-sustentabilidad .content-sustentabilidad-info {
+    width: 50%;
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .content-sustentabilidad .content-sustentabilidad-title,
+.content-sustentabilidad .content-sustentabilidad-info {
+    padding: 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .content-sustentabilidad .content-sustentabilidad-title,
+.content-sustentabilidad .content-sustentabilidad-info {
+    padding: 80px;
+  }
+}
+.content-sustentabilidad .content-sustentabilidad-title {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 30px;
+}
+.content-sustentabilidad .content-sustentabilidad-title .title-sustentabilidad {
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+}
+@media screen and (min-width: 1024px) {
+  .content-sustentabilidad .content-sustentabilidad-title .title-sustentabilidad {
+    font-size: 50px;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .content-sustentabilidad .content-sustentabilidad-title .title-sustentabilidad {
+    font-size: 80px;
+  }
+}
+.content-sustentabilidad .content-sustentabilidad-title .title-sustentabilidad p {
+  line-height: normal;
+  color: #8FBD28;
+}
+.content-sustentabilidad .content-sustentabilidad-title .title-sustentabilidad p:first-child {
+  color: #fff !important;
+}
+.content-sustentabilidad .content-sustentabilidad-title .info-white {
+  color: #fff;
+  font-size: 18px;
+}
+.content-sustentabilidad .content-sustentabilidad-title .card-info {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 18px;
+  color: #fff;
+  padding: 20px;
+}
+.content-sustentabilidad .content-sustentabilidad-info {
+  background-color: #fff;
+  padding: 20px;
+  overflow: auto;
+}
+.content-sustentabilidad .content-sustentabilidad-info::-webkit-scrollbar {
+  display: none;
+}
+
+.container-productos {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+.container-productos::-webkit-scrollbar {
+  display: none;
+}
+.container-productos .title-section {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.container-productos .title-section .subtitle {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .container-productos .title-section .subtitle {
+    width: 50%;
+  }
+}
+.container-productos .content-products {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: auto;
+}
+.container-productos .content-products::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .container-productos .content-products {
+    grid-gap: 20px;
+  }
+}
+.container-productos .content-products .content-products-img,
+.container-productos .content-products .content-products-info {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .container-productos .content-products .content-products-img,
+.container-productos .content-products .content-products-info {
+    width: 50%;
+  }
+}
+.container-productos .content-products .content-products-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-acerca {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(143, 189, 40, 0.05);
+}
+.container-acerca .title-section {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background-image: url("/images/ilustrativas/planta5.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom center;
+  animation-name: plantaCreciendo;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+}
+.container-acerca .title-section > .subtitle {
+  color: #006241;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-acerca .title-section > .parrafo {
+  color: #55626D;
+}
+@media screen and (min-width: 1024px) {
+  .container-acerca .title-section {
+    width: 50%;
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-acerca .title-section {
+    padding: 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container-acerca .title-section {
+    padding: 80px;
+  }
+}
+.container-acerca .acerca-container-infographic {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  overflow: auto;
+}
+.container-acerca .acerca-container-infographic::-webkit-scrollbar {
+  display: none;
+}
+.container-acerca .acerca-container-infographic > .content-infographic-data {
+  border-bottom: 1px solid #1E3932;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 60px 0px;
+}
+.container-acerca .acerca-container-infographic > .content-infographic-data:last-child {
+  border-bottom: none;
+}
+.container-acerca .acerca-container-infographic > .content-infographic-data:nth-of-type(2n) .infographic-fecha {
+  color: #006241;
+}
+.container-acerca .acerca-container-infographic > .content-infographic-data:first-child {
+  padding-top: 0px;
+}
+.container-acerca .acerca-container-infographic > .content-infographic-data .infographic-fecha {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  .container-acerca .acerca-container-infographic > .content-infographic-data .infographic-fecha {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-acerca .acerca-container-infographic > .content-infographic-data .infographic-fecha {
+    font-size: 80px;
+  }
+}
+.container-acerca .acerca-container-infographic > .content-infographic-data .infographic-text {
+  color: #55626D;
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  .container-acerca .acerca-container-infographic {
+    width: 50%;
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container-acerca .acerca-container-infographic {
+    padding: 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container-acerca .acerca-container-infographic {
+    padding: 80px;
+  }
+}
+
+@keyframes plantaCreciendo {
+  0% {
+    background-image: url("/images/ilustrativas/planta5.png");
+  }
+  25% {
+    background-image: url("/images/ilustrativas/planta4.png");
+  }
+  50% {
+    background-image: url("/images/ilustrativas/planta3.png");
+  }
+  75% {
+    background-image: url("/images/ilustrativas/planta2.png");
+  }
+  100% {
+    background-image: url("/images/ilustrativas/planta1.png");
+  }
+}
+.container-home {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/background/fondo1.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .container-home {
+    flex-direction: row-reverse !important;
+  }
+}
+.container-home .cont-parrafo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.container-home .cont-parrafo .parrafo {
+  color: #fff;
+  font-size: 18px;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .container-home .cont-parrafo {
+    width: 50%;
+    border-left: 1px solid #fff;
+  }
+}
+
 @font-face {
   font-family: ‘Roboto-Regular’;
   src: url("/assets/fonts/Roboto-Regular.ttf") format("svg");
@@ -7,7 +324,6 @@
 }
 * {
   box-sizing: border-box;
-  transition: all ease-in-out 300ms;
 }
 
 html, body {
@@ -65,25 +381,24 @@ ul li {
 .cas-body .container-main .container-home,
 .cas-body .container-main .container-acerca,
 .cas-body .container-main .container-sustentabilidad,
+.cas-body .container-main .content-sustentabilidad,
 .cas-body .container-main .container-productos,
 .cas-body .container-main .container-contacto {
   position: relative;
   display: flex;
   flex-direction: row;
-  transition: all ease-in-out 3000ms;
+  transition: all ease-in-out 300ms;
   padding: 0px 15px;
 }
 @media screen and (min-width: 1024px) {
   .cas-body .container-main .container-home,
 .cas-body .container-main .container-acerca,
 .cas-body .container-main .container-sustentabilidad,
+.cas-body .container-main .content-sustentabilidad,
 .cas-body .container-main .container-productos,
 .cas-body .container-main .container-contacto {
     padding: 0px 160px 0px 300px;
   }
-}
-.cas-body .container-main .container-home {
-  flex-direction: row-reverse;
 }
 .cas-body .toggle-menu {
   width: 60px;
@@ -112,7 +427,7 @@ ul li {
 
 .title-xxl {
   position: absolute;
-  font-size: 60px;
+  font-size: 45px;
   color: #fff;
   top: 40%;
   left: 50%;
@@ -120,7 +435,7 @@ ul li {
 }
 @media screen and (min-width: 700px) {
   .title-xxl {
-    font-size: 120px;
+    font-size: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -264,167 +579,6 @@ ul li {
     color: #fff;
     opacity: 0.5;
   }
-}
-
-.container-home {
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/background/fondo1.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-content: center;
-  position: relative;
-}
-.container-home .cont-parrafo {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
-.container-home .cont-parrafo .parrafo {
-  color: #fff;
-  font-size: 18px;
-  width: fit-content;
-  height: fit-content;
-  padding: 20px 30px;
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 1024px) {
-  .container-home .cont-parrafo {
-    width: 50%;
-    border-left: 1px solid #fff;
-  }
-}
-
-.container-acerca {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(143, 189, 40, 0.05);
-}
-.container-acerca .title-section {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  background-image: url("/images/ilustrativas/planta5.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: bottom left;
-  animation-name: plantaCreciendo;
-  animation-duration: 50000ms;
-  animation-iteration-count: infinite;
-}
-.container-acerca .title-section > .subtitle {
-  color: #006241;
-  margin-bottom: 30px;
-  font-size: 40px;
-}
-.container-acerca .title-section > .parrafo {
-  color: #55626D;
-}
-@media screen and (min-width: 1024px) {
-  .container-acerca .title-section {
-    width: 50%;
-    padding: 50px;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .container-acerca .title-section {
-    padding: 60px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .container-acerca .title-section {
-    padding: 80px;
-  }
-}
-.container-acerca .acerca-container-infographic {
-  width: 100%;
-  background-color: #fff;
-  padding: 20px;
-  overflow: auto;
-}
-.container-acerca .acerca-container-infographic::-webkit-scrollbar {
-  display: none;
-}
-.container-acerca .acerca-container-infographic > .content-infographic-data {
-  border-bottom: 1px solid #1E3932;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 60px 0px;
-}
-.container-acerca .acerca-container-infographic > .content-infographic-data:last-child {
-  border-bottom: none;
-}
-.container-acerca .acerca-container-infographic > .content-infographic-data:nth-of-type(2n) .infographic-fecha {
-  color: #006241;
-}
-.container-acerca .acerca-container-infographic > .content-infographic-data:first-child {
-  padding-top: 0px;
-}
-.container-acerca .acerca-container-infographic > .content-infographic-data .infographic-fecha {
-  font-size: 80px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-.container-acerca .acerca-container-infographic > .content-infographic-data .infographic-text {
-  color: #55626D;
-  font-size: 14px;
-}
-@media screen and (min-width: 1024px) {
-  .container-acerca .acerca-container-infographic {
-    width: 50%;
-    padding: 50px;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .container-acerca .acerca-container-infographic {
-    padding: 60px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .container-acerca .acerca-container-infographic {
-    padding: 80px;
-  }
-}
-
-@keyframes plantaCreciendo {
-  0% {
-    background-image: url("/images/ilustrativas/planta5.png");
-  }
-  25% {
-    background-image: url("/images/ilustrativas/planta4.png");
-  }
-  50% {
-    background-image: url("/images/ilustrativas/planta3.png");
-  }
-  75% {
-    background-image: url("/images/ilustrativas/planta2.png");
-  }
-  100% {
-    background-image: url("/images/ilustrativas/planta1.png");
-  }
-}
-.container-sustentabilidad {
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/background/fondo2.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-content: center;
-  position: relative;
 }
 
 /*# sourceMappingURL=styles.css.map */

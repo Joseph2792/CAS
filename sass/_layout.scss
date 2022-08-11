@@ -14,7 +14,7 @@
 
 * {
     box-sizing: border-box;
-    transition: all ease-in-out 300ms;
+    //transition: all ease-in-out 300ms;
 }
 
 html, body {
@@ -68,22 +68,19 @@ ul li{
         .container-home,
         .container-acerca,
         .container-sustentabilidad,
+        .content-sustentabilidad,
         .container-productos,
         .container-contacto{
             position: relative;
             display: flex;
             flex-direction: row;
-            transition: all ease-in-out 3000ms;
+            transition: all ease-in-out 300ms;
             padding: 0px 15px;
             
             @media screen and (min-width: 1024px){
                 padding: 0px 160px 0px 300px;                
             }
-        }                
-
-        .container-home{
-            flex-direction: row-reverse;
-        }
+        }                        
     }
 
     .toggle-menu{        
@@ -109,14 +106,14 @@ ul li{
 
 .title-xxl{
     position: absolute;
-    font-size: 60px;
+    font-size: 45px;
     color: #fff;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     @media screen and (min-width: 700px) {
-        font-size: $font-size-xxlarge;
+        font-size: 50px;
     }
     
     @media screen and (min-width: 1024px) {
