@@ -231,35 +231,65 @@
         </section>
 
         <section id="section-contacto" class="container-contacto">
-            <h1 class="title-xxl"><b>CONTACTO</b></h1> 
-            <div class="w-100 conteiner-tabwizar"></div>
-            <div class="content-form form-cotizacion">
-                <div><span>Contacto</span></div>
-                <form action="">
-                    <div>
-                        <label for=""><i>Ingresá tu Nombre y Apellido</i></label>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div>
-                        <label for="cotizar-email"><i>E-mail</i></label>
-                        <input type="email" name="cotizar-email" id="cotizar-email">
-                    </div>
-                    <div>
-                        <label for="cotizar-telefono"><i>Teléfono</i></label>
-                        <input type="number" name="cotizar-telefono" id="cotizar-telefono">
-                    </div>
-                    <div>
-                        <label for="cotizar-mensaje"><i>Mensaje</i></label>
-                        <input type="text" name="cotizar-mensaje" id="cotizar-mensaje">
-                    </div>
-                    <div>
-                        <input type="submit" value="ENVIAR">
-                    </div>
-                </form>
+            <div class="w-100 position-relative content-title-xxl">
+                <h1 class="title-xxl"><b>CONTACTO</b></h1> 
             </div>
-            <div class="footer">
-                <div><span>1976-2022</span><span>CAS</span></div>
-                <div>
+
+            <div class="w-100 container-tabwizar">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-cosultasTecnicas-tab" data-bs-toggle="pill" data-bs-target="#pills-cosultasTecnicas" type="button" role="tab" aria-controls="pills-cosultasTecnicas" aria-selected="true"><span class="numberTab">1</span> Consultas técnicas</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-cotizaciones-tab" data-bs-toggle="pill" data-bs-target="#pills-cotizaciones" type="button" role="tab" aria-controls="pills-cotizaciones" aria-selected="false"><span class="numberTab">2</span>Cotizaciones</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-comentarios-tab" data-bs-toggle="pill" data-bs-target="#pills-comentarios" type="button" role="tab" aria-controls="pills-comentarios" aria-selected="false"><span class="numberTab">3</span>Comentarios</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-otros-tab" data-bs-toggle="pill" data-bs-target="#pills-otros" type="button" role="tab" aria-controls="pills-otros" aria-selected="false" ><span class="numberTab">4</span>Otros</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container-form form-cotizacion">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade" id="pills-cosultasTecnicas" role="tabpanel" aria-labelledby="pills-cosultasTecnicas-tab" tabindex="0"></div>
+                    <div class="tab-pane fade show active" id="pills-cotizaciones" role="tabpanel" aria-labelledby="pills-cotizaciones-tab" tabindex="0">
+                        <div class="title-form">
+                            <span>Contacto</span>
+                        </div>
+
+                        <form action="" class="">
+                            <div class="item-form">
+                                <label for="" class="label-white"><i>Ingresá tu Nombre y Apellido</i></label>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="item-form">
+                                <label for="cotizar-email" class="label-white"><i>E-mail</i></label>
+                                <input type="email" name="cotizar-email" id="cotizar-email">
+                            </div>
+                            <div class="item-form">
+                                <label for="cotizar-telefono" class="label-white"><i>Teléfono</i></label>
+                                <input type="number" name="cotizar-telefono" id="cotizar-telefono">
+                            </div>
+                            <div class="item-form">
+                                <label for="cotizar-mensaje" class="label-white"><i>Mensaje</i></label>
+                                <input type="text" name="cotizar-mensaje" id="cotizar-mensaje">
+                            </div>
+                            <div class="item-form-button">
+                                <input type="submit" value="ENVIAR" class="form-button">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-comentarios" role="tabpanel" aria-labelledby="pills-comentarios-tab" tabindex="0"></div>
+                    <div class="tab-pane fade" id="pills-otros" role="tabpanel" aria-labelledby="pills-otros-tab" tabindex="0"></div>
+                </div>                
+            </div>
+
+            <div class="footer w-100">
+                <div class="info-footer"><span>1976-2022</span><span><b>CAS</b></span></div>
+                <div class="redes-footer">
                     <i class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
@@ -283,3 +313,6 @@
     <script src="/js/index.js"></script>
 </body>
 </html>
+
+
+  

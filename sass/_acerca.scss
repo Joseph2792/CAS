@@ -24,27 +24,29 @@
         >.parrafo{
             color: $color-gray;
         }
+        
+        background-image: url('/images/ilustrativas/planta5.png');
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: bottom center;
+        animation-name: plantaCreciendo;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
 
         @media  screen and (min-width: 1024px) {
             width: 50%;
             padding: 50px;
+            background-size: 80%;
         }
 
         @media  screen and (min-width: 1366px) {         
             padding: 60px;
+            background-size: auto;            
         }
 
         @media  screen and (min-width: 1920px) {         
             padding: 80px;
         }
-
-        background-image: url('/images/ilustrativas/planta5.png');
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: bottom center;
-        animation-name: plantaCreciendo;
-        animation-duration: 5000ms;
-        animation-iteration-count: infinite;
     }
 
     .acerca-container-infographic{
@@ -62,7 +64,7 @@
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            padding: 60px 0px;
+            padding: 30px 0px;
 
             &:last-child{
                 border-bottom: none;
@@ -100,9 +102,16 @@
         @media  screen and (min-width: 1024px) {
             width: 50%;
             padding: 50px;
+
+            >.content-infographic-data{
+                padding: 40px 0px;
+            }
         }
         @media  screen and (min-width: 1366px) {         
             padding: 60px;
+            >.content-infographic-data{
+                padding: 60px 0px;
+            }
         }
         @media  screen and (min-width: 1920px) {         
             padding: 80px;
@@ -113,18 +122,63 @@
 
 @keyframes plantaCreciendo {
     0%{
-        background-image: url('/images/ilustrativas/planta5.png')
+        background-image: url('/images/ilustrativas/planta5.png');
+        background-size: 50%;
+
+        @media  screen and (min-width: 1024px) {            
+            background-size: 80%;
+        }
+
+        @media  screen and (min-width: 1366px) {                  
+            background-size: auto;            
+        }
     }
     25%{
-        background-image: url('/images/ilustrativas/planta4.png')
+        background-image: url('/images/ilustrativas/planta4.png');
+        background-size: 50%;
+        
+        @media  screen and (min-width: 1024px) {            
+            background-size: 80%;
+        }
+
+        @media  screen and (min-width: 1366px) {                  
+            background-size: auto;            
+        }
     }
     50%{
-        background-image: url('/images/ilustrativas/planta3.png')
+        background-image: url('/images/ilustrativas/planta3.png');
+        background-size: 50%;
+        
+        @media  screen and (min-width: 1024px) {            
+            background-size: 80%;
+        }
+
+        @media  screen and (min-width: 1366px) {                  
+            background-size: auto;            
+        }
     }
     75%{
-        background-image: url('/images/ilustrativas/planta2.png')
+        background-image: url('/images/ilustrativas/planta2.png');
+        background-size: 50%;
+        
+        @media  screen and (min-width: 1024px) {            
+            background-size: 80%;
+        }
+
+        @media  screen and (min-width: 1366px) {                  
+            background-size: auto;            
+        }
     }
     100%{
-        background-image: url('/images/ilustrativas/planta1.png')
+        background-image: url('/images/ilustrativas/planta1.png');
+        background-size: 50%;
+        
+        @media  screen and (min-width: 1024px) {            
+            background-size: 80%;
+        }
+
+        @media  screen and (min-width: 1366px) {                  
+            background-size: auto;            
+        }
     }
 }

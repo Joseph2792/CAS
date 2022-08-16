@@ -8,9 +8,105 @@
   background-size: cover;
   position: relative;
   overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .container-contacto::-webkit-scrollbar {
   display: none;
+}
+.container-contacto::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(30, 57, 50, 0.5);
+}
+.container-contacto .container-form {
+  width: 100%;
+}
+.container-contacto .container-form .tab-content .tab-pane {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container-contacto .container-form .tab-content .tab-pane > .title-form {
+  width: 20%;
+  color: #fff;
+}
+.container-contacto .container-form .tab-content .tab-pane > form {
+  width: 80%;
+  padding: 50px 0px;
+}
+
+.content-title-xxl {
+  height: 40%;
+}
+
+.nav-pills {
+  width: 100%;
+  height: 160px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.nav-pills .nav-item {
+  height: 100%;
+}
+.nav-pills .nav-item .nav-link {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  border-radius: 0px !important;
+  position: relative;
+  font-size: 22px !important;
+}
+.nav-pills .nav-item .nav-link .numberTab {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #fff !important;
+}
+.nav-pills .nav-item .active,
+.nav-pills .nav-item .nav-link:hover {
+  font-weight: 600;
+  background-color: #8FBD28 !important;
+  border: 1px solid #8FBD28 !important;
+}
+
+.item-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.item-form > label {
+  color: #fff;
+  font-style: italic;
+}
+.item-form > input {
+  background-color: inherit !important;
+  border: none !important;
+  border-bottom: 2px solid #fff !important;
+  color: #fff !important;
+}
+.item-form > input:hover, .item-form > input:active, .item-form > input:focus {
+  border: none !important;
+  outline: none !important;
+  border-bottom: 2px solid #fff !important;
+}
+
+.form-button {
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  padding: 20px 27px;
+  background-color: inherit;
+}
+.form-button:hover {
+  background-color: #8FBD28;
+  font-weight: 600;
 }
 
 .container-sustentabilidad {
@@ -170,7 +266,7 @@
   padding: 20px;
   background-image: url("/images/ilustrativas/planta5.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 50%;
   background-position: bottom center;
   animation-name: plantaCreciendo;
   animation-duration: 5000ms;
@@ -189,11 +285,13 @@
   .container-acerca .title-section {
     width: 50%;
     padding: 50px;
+    background-size: 80%;
   }
 }
 @media screen and (min-width: 1366px) {
   .container-acerca .title-section {
     padding: 60px;
+    background-size: auto;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -215,7 +313,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 60px 0px;
+  padding: 30px 0px;
 }
 .container-acerca .acerca-container-infographic > .content-infographic-data:last-child {
   border-bottom: none;
@@ -250,10 +348,16 @@
     width: 50%;
     padding: 50px;
   }
+  .container-acerca .acerca-container-infographic > .content-infographic-data {
+    padding: 40px 0px;
+  }
 }
 @media screen and (min-width: 1366px) {
   .container-acerca .acerca-container-infographic {
     padding: 60px;
+  }
+  .container-acerca .acerca-container-infographic > .content-infographic-data {
+    padding: 60px 0px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -265,18 +369,53 @@
 @keyframes plantaCreciendo {
   0% {
     background-image: url("/images/ilustrativas/planta5.png");
+    background-size: 50%;
+    @media screen and (min-width: 1024px) {
+      background-size: 80%;
+    }
+    @media screen and (min-width: 1366px) {
+      background-size: auto;
+    }
   }
   25% {
     background-image: url("/images/ilustrativas/planta4.png");
+    background-size: 50%;
+    @media screen and (min-width: 1024px) {
+      background-size: 80%;
+    }
+    @media screen and (min-width: 1366px) {
+      background-size: auto;
+    }
   }
   50% {
     background-image: url("/images/ilustrativas/planta3.png");
+    background-size: 50%;
+    @media screen and (min-width: 1024px) {
+      background-size: 80%;
+    }
+    @media screen and (min-width: 1366px) {
+      background-size: auto;
+    }
   }
   75% {
     background-image: url("/images/ilustrativas/planta2.png");
+    background-size: 50%;
+    @media screen and (min-width: 1024px) {
+      background-size: 80%;
+    }
+    @media screen and (min-width: 1366px) {
+      background-size: auto;
+    }
   }
   100% {
     background-image: url("/images/ilustrativas/planta1.png");
+    background-size: 50%;
+    @media screen and (min-width: 1024px) {
+      background-size: 80%;
+    }
+    @media screen and (min-width: 1366px) {
+      background-size: auto;
+    }
   }
 }
 .container-home {
@@ -446,6 +585,26 @@ ul li {
   }
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #fff !important;
+  padding: 20px;
+}
+.footer div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.footer div span, .footer div i {
+  margin: 0px 10px;
+  font-size: 18px;
+}
+
 .navbar {
   height: 100vh;
   min-width: 60px;
@@ -471,6 +630,7 @@ ul li {
 .navbar > .container-menu {
   display: none;
   height: auto;
+  width: 100%;
   margin: auto;
 }
 @media screen and (min-width: 1024px) {

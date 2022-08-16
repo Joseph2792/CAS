@@ -122,3 +122,26 @@ ul li{
         left: 54%;        
     }
 }
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #fff !important;
+    padding: 20px;
+
+    div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        color: #fff;
+
+        span,i{
+            margin: 0px 10px;
+            font-size: $font-size-medium;
+        }
+    }
+}
