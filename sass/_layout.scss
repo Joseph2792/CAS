@@ -74,16 +74,17 @@ ul li{
             position: relative;
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
+
             transition: all ease-in-out 300ms;
             padding: 0px 15px;
             
             @media screen and (min-width: 1024px){
-                padding: 0px 80px 0px 150px;
-                               
+                padding: 0px 80px 0px 230px;                               
             }
 
             @media screen and (min-width: 1366px){
-                padding: 0px 100px 0px 200px; 
+                padding: 0px 100px 0px 225px; 
             }  
 
             @media screen and (min-width: 1920px){
@@ -113,13 +114,18 @@ ul li{
     }
 }
 
-
-.content-column-second{
-    padding: 20px;
+.content-column{
+    width: 100%;
+    height: auto;
+    padding: 15px;
     overflow: auto;    
     
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    @media  screen and (min-width: 700px) {
+        height: 100%;        
     }
 
     @media  screen and (min-width: 1024px) {
@@ -135,7 +141,6 @@ ul li{
     @media  screen and (min-width: 1920px) {         
         padding: 80px;
     }
-
 }
 
 .title-xxl{
@@ -151,9 +156,19 @@ ul li{
     }
     
     @media screen and (min-width: 1024px) {
-        font-size: $font-size-xlarge;
+        font-size: $font-size-xxlarge;
         top: 45%;
         left: 54%;        
+    }
+}
+
+.separador{
+    width: 100%;
+    color: $color-gray;
+    margin: 20px 0px;
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 40px;
     }
 }
 
