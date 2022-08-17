@@ -49,16 +49,9 @@
         }
     }
 
-    .acerca-container-infographic{
-        width: 100%;
+    .acerca-container-infographic{        
         background-color: #fff;
-        padding: 20px;
-        overflow: auto;
-        
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        
+                
         >.content-infographic-data{
             border-bottom: 1px solid $color-darkgreen;
             display: flex;
@@ -89,7 +82,7 @@
                     font-size: 50px;
                 }
                 @media  screen and (min-width: 1366px){
-                    font-size: $font-size-xlarge;
+                    font-size: $font-size-xxlarge;
                 }        
             }
 
@@ -97,28 +90,21 @@
                 color: $color-gray;
                 font-size: $font-size-short;                
             }
-        }
 
-        @media  screen and (min-width: 1024px) {
-            width: 50%;
-            padding: 50px;
-
-            >.content-infographic-data{
-                padding: 40px 0px;
+            @media  screen and (min-width: 1024px) {                                    
+                padding: 40px 0px;            
+            }
+    
+            @media  screen and (min-width: 1366px) {         
+                padding: 60px 0px;                
             }
         }
-        @media  screen and (min-width: 1366px) {         
-            padding: 60px;
-            >.content-infographic-data{
-                padding: 60px 0px;
-            }
-        }
-        @media  screen and (min-width: 1920px) {         
-            padding: 80px;
-        }
+
+
 
     }
 }
+
 
 @keyframes plantaCreciendo {
     0%{

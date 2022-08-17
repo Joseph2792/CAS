@@ -82,12 +82,20 @@
 
     .content-sustentabilidad-info{
         background-color: #fff;
-        padding: 20px;
-        overflow: auto;
-
-        &::-webkit-scrollbar {
-            display: none;
+        .title-green{
+            font-size: $font-size-xlarge;
+            color: $color-green;
         }
-        
+
+        .subtitle-green{
+            color: $color-green;
+            font-size: 30px;
+        }
+
+        .content-list > li{
+            list-style: disc;
+            color: $color-gray !important;
+        }
     }    
 }
+

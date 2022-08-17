@@ -78,8 +78,17 @@ ul li{
             padding: 0px 15px;
             
             @media screen and (min-width: 1024px){
-                padding: 0px 160px 0px 300px;                
+                padding: 0px 80px 0px 150px;
+                               
             }
+
+            @media screen and (min-width: 1366px){
+                padding: 0px 100px 0px 200px; 
+            }  
+
+            @media screen and (min-width: 1920px){
+                padding: 0px 160px 0px 300px; 
+            }  
         }                        
     }
 
@@ -102,6 +111,31 @@ ul li{
             width: 160px;
         }  
     }
+}
+
+
+.content-column-second{
+    padding: 20px;
+    overflow: auto;    
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media  screen and (min-width: 1024px) {
+        border-left: 1px solid #fff;
+        width: 50%;
+        padding: 50px;        
+    }
+
+    @media  screen and (min-width: 1366px) {         
+        padding: 60px;
+    }
+
+    @media  screen and (min-width: 1920px) {         
+        padding: 80px;
+    }
+
 }
 
 .title-xxl{
@@ -143,5 +177,10 @@ ul li{
             margin: 0px 10px;
             font-size: $font-size-medium;
         }
+    }
+
+    
+    @media screen and (min-width:1024px){
+        
     }
 }

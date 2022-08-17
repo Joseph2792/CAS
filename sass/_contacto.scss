@@ -31,6 +31,7 @@
     .container-tabwizar{
         
     }
+
     .container-form{
         width: 100%;        
 
@@ -41,13 +42,21 @@
                 flex-wrap: wrap;
 
                 >.title-form{
-                    width: 20%;
+                    width: 100%;
                     color: #fff;
+
+                    @media screen and (min-width:1024px) {
+                        width: 20%;
+                    }
                 }
 
                 > form{
-                    width: 80%;
+                    width: 100%;
                     padding: 50px 0px;
+
+                    @media screen and (min-width:1024px) {
+                        width: 80%;
+                    }
                 }
             }
         }
@@ -64,7 +73,6 @@
     height: 160px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
 
     .nav-item{
         height: 100%;        
@@ -134,4 +142,5 @@
         background-color: $color-lightgreen;
         font-weight: 600;
     }
+
 }
