@@ -29,7 +29,19 @@
     }
 
     .container-tabwizar{
-        
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 10px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media screen and (min-width: 1024px) {
+            overflow: inherit;
+            scroll-snap-type: none;
+            scroll-padding: inherit;
+        }
     }
 
     .container-form{

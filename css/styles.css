@@ -22,6 +22,21 @@
   width: 100%;
   background-color: rgba(30, 57, 50, 0.5);
 }
+.container-contacto .container-tabwizar {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 10px;
+}
+.container-contacto .container-tabwizar::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .container-contacto .container-tabwizar {
+    overflow: inherit;
+    scroll-snap-type: none;
+    scroll-padding: inherit;
+  }
+}
 .container-contacto .container-form {
   width: 100%;
 }
@@ -178,26 +193,6 @@
   background-color: #fff;
   height: 100%;
 }
-.content-sustentabilidad .content-sustentabilidad-info .title-green {
-  font-size: 45px;
-  color: #006241;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .content-sustentabilidad .content-sustentabilidad-info .title-green {
-    margin-bottom: 40px;
-  }
-}
-.content-sustentabilidad .content-sustentabilidad-info .subtitle-green {
-  color: #006241;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .content-sustentabilidad .content-sustentabilidad-info .subtitle-green {
-    margin-bottom: 40px;
-  }
-}
 .content-sustentabilidad .content-sustentabilidad-info .content-list {
   margin-bottom: 20px;
 }
@@ -236,54 +231,58 @@
 }
 
 .container-productos {
+  background-color: #F9FCF4;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  overflow: auto;
+  /*        
+  &::-webkit-scrollbar {
+      display: none;
+  }
+  */
 }
-.container-productos::-webkit-scrollbar {
-  display: none;
+.container-productos .content-productos-images .products-img {
+  width: 100%;
 }
-.container-productos .title-section {
+.container-productos .content-productos-images .products-img img {
+  width: 100%;
+  height: auto;
+}
+.container-productos .content-productos-data {
+  background-color: #fff;
+}
+.container-productos .content-productos-data .title-section {
   display: flex;
   flex-direction: row-reverse;
 }
-.container-productos .title-section .subtitle {
-  width: 100%;
+.container-productos .content-productos-data .products-img,
+.container-productos .content-productos-data .products-info {
+  height: 300px;
 }
 @media screen and (min-width: 1024px) {
-  .container-productos .title-section .subtitle {
-    width: 50%;
+  .container-productos .content-productos-data .products-img,
+.container-productos .content-productos-data .products-info {
+    height: 400px;
   }
 }
-.container-productos .content-products {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: auto;
-}
-.container-productos .content-products::-webkit-scrollbar {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  .container-productos .content-products {
-    grid-gap: 20px;
+@media screen and (min-width: 1366px) {
+  .container-productos .content-productos-data .products-img,
+.container-productos .content-productos-data .products-info {
+    height: 550px;
   }
 }
-.container-productos .content-products .content-products-img,
-.container-productos .content-products .content-products-info {
-  width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  .container-productos .content-products .content-products-img,
-.container-productos .content-products .content-products-info {
-    width: 50%;
+@media screen and (min-width: 1920px) {
+  .container-productos .content-productos-data .products-img,
+.container-productos .content-productos-data .products-info {
+    height: 680px;
   }
 }
-.container-productos .content-products .content-products-info {
+.container-productos .content-productos-data .products-info {
+  height: 100%;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -292,7 +291,7 @@
 .container-acerca {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: rgba(143, 189, 40, 0.05);
 }
 .container-acerca .title-section {
@@ -427,6 +426,10 @@
     }
   }
 }
+.container-acerca-mision-vision {
+  background-color: #F9FCF4;
+}
+
 .container-home {
   width: 100%;
   height: 100%;
@@ -528,6 +531,7 @@ ul li {
 }
 .cas-body .container-main .container-home,
 .cas-body .container-main .container-acerca,
+.cas-body .container-main .container-acerca-mision-vision,
 .cas-body .container-main .container-sustentabilidad,
 .cas-body .container-main .content-sustentabilidad,
 .cas-body .container-main .container-productos,
@@ -542,6 +546,7 @@ ul li {
 @media screen and (min-width: 1024px) {
   .cas-body .container-main .container-home,
 .cas-body .container-main .container-acerca,
+.cas-body .container-main .container-acerca-mision-vision,
 .cas-body .container-main .container-sustentabilidad,
 .cas-body .container-main .content-sustentabilidad,
 .cas-body .container-main .container-productos,
@@ -552,6 +557,7 @@ ul li {
 @media screen and (min-width: 1366px) {
   .cas-body .container-main .container-home,
 .cas-body .container-main .container-acerca,
+.cas-body .container-main .container-acerca-mision-vision,
 .cas-body .container-main .container-sustentabilidad,
 .cas-body .container-main .content-sustentabilidad,
 .cas-body .container-main .container-productos,
@@ -562,6 +568,7 @@ ul li {
 @media screen and (min-width: 1920px) {
   .cas-body .container-main .container-home,
 .cas-body .container-main .container-acerca,
+.cas-body .container-main .container-acerca-mision-vision,
 .cas-body .container-main .container-sustentabilidad,
 .cas-body .container-main .content-sustentabilidad,
 .cas-body .container-main .container-productos,
@@ -634,17 +641,49 @@ ul li {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (min-width: 700px) {
-  .title-xxl {
-    font-size: 50px;
-  }
-}
 @media screen and (min-width: 1024px) {
   .title-xxl {
     font-size: 80px;
     top: 45%;
     left: 54%;
   }
+}
+
+.title-green-xxl {
+  font-size: 45px;
+  color: #006241;
+}
+@media screen and (min-width: 1024px) {
+  .title-green-xxl {
+    font-size: 80px;
+  }
+}
+
+.title-green {
+  font-size: 45px;
+  color: #006241;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .title-green {
+    margin-bottom: 40px;
+  }
+}
+
+.subtitle-green {
+  color: #006241;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .subtitle-green {
+    margin-bottom: 40px;
+  }
+}
+
+.parrafo {
+  font-size: 14px;
+  color: #55626D;
 }
 
 .separador {

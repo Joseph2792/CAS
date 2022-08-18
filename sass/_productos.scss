@@ -1,58 +1,63 @@
 @import "variables";
 
 .container-productos{
+    background-color: #F9FCF4;
+
     position: relative;
     width: 100%;
-    height: 100%;
+    //height: 100%;
+    height: auto;
+    
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
-    overflow: auto;
-        
+    //overflow: auto;
+    /*        
     &::-webkit-scrollbar {
         display: none;
     }
+    */
+    .content-productos-images{
 
-    .title-section{
-        display: flex;
-        flex-direction: row-reverse;
-    
-        .subtitle{
+        .products-img{
             width: 100%;
-    
-            @media screen and (min-width:1024px){
-                width: 50%;
+            
+            img{
+                width: 100%;
+                height: auto;
             }
         }
     }
 
-    .content-products{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        overflow: auto;
+    .content-productos-data{
+        background-color: #fff;
 
-        &::-webkit-scrollbar {
-            display: none;
+        .title-section{
+            display: flex;
+            flex-direction: row-reverse;        
         }
-        
-        @media screen and (min-width: 1024px) {
-            grid-gap: 20px;
-        }
+        .products-img,
+        .products-info{
+            height: 300px;
 
-        .content-products-img,
-        .content-products-info{
-            width: 100%;
-            
+            @media screen and (min-width: 1024px){
+                height: 400px;
+            }
 
-            @media screen and (min-width: 1024px) {
-                width: 50%;
-                
+            @media screen and (min-width: 1366px){
+                height: 550px;
+            }
+
+            @media screen and (min-width: 1920px){
+                height: 680px;
             }
         }
 
-        .content-products-info{
+        .products-info{
+            height: 100%;
+            background-color: #fff;
+
             display: flex;
             flex-direction: column;
             justify-content: center;

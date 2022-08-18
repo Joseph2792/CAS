@@ -67,6 +67,7 @@ ul li{
 
         .container-home,
         .container-acerca,
+        .container-acerca-mision-vision,
         .container-sustentabilidad,
         .content-sustentabilidad,
         .container-productos,
@@ -145,21 +146,51 @@ ul li{
 
 .title-xxl{
     position: absolute;
-    font-size: 45px;
+    font-size: $font-size-xlarge;
     color: #fff;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    @media screen and (min-width: 700px) {
-        font-size: 50px;
-    }
     
     @media screen and (min-width: 1024px) {
         font-size: $font-size-xxlarge;
         top: 45%;
         left: 54%;        
     }
+}
+
+.title-green-xxl{
+    font-size: $font-size-xlarge;
+    color: $color-green;
+
+    @media screen and (min-width: 1024px) {
+        font-size: $font-size-xxlarge;
+    }
+}
+
+.title-green{
+    font-size: $font-size-xlarge;
+    color: $color-green;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 40px;
+    }
+}
+
+.subtitle-green{
+    color: $color-green;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 40px;
+    }
+}
+
+.parrafo{
+    font-size: $font-size-short;
+    color: $color-gray;
 }
 
 .separador{

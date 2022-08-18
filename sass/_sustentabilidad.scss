@@ -65,27 +65,7 @@
     .content-sustentabilidad-info{
         background-color: #fff;
         height: 100%;
-
-        .title-green{
-            font-size: $font-size-xlarge;
-            color: $color-green;
-            margin-bottom: 20px;
-    
-            @media screen and (min-width: 1024px) {
-                margin-bottom: 40px;
-            }
-        }
-
-        .subtitle-green{
-            color: $color-green;
-            font-size: 30px;
-            margin-bottom: 20px;
-    
-            @media screen and (min-width: 1024px) {
-                margin-bottom: 40px;
-            }
-        }
-
+        
         .content-list{
             margin-bottom: 20px;
     
