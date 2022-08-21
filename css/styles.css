@@ -156,6 +156,13 @@
   flex-direction: column;
   grid-gap: 30px;
 }
+@media screen and (min-width: 1024px) {
+  .content-sustentabilidad .content-sustentabilidad-title {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+}
 .content-sustentabilidad .content-sustentabilidad-title .title-sustentabilidad {
   font-size: 30px;
   font-weight: 600;
@@ -192,18 +199,6 @@
 .content-sustentabilidad .content-sustentabilidad-info {
   background-color: #fff;
   height: 100%;
-}
-.content-sustentabilidad .content-sustentabilidad-info .content-list {
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .content-sustentabilidad .content-sustentabilidad-info .content-list {
-    margin-bottom: 40px;
-  }
-}
-.content-sustentabilidad .content-sustentabilidad-info .content-list > li {
-  list-style: disc;
-  color: #55626D !important;
 }
 .content-sustentabilidad .content-sustentabilidad-info .content-fundador .container-photo {
   height: 120px;
@@ -295,13 +290,7 @@
   background-color: rgba(143, 189, 40, 0.05);
 }
 .container-acerca .title-section {
-  background-image: url("/images/ilustrativas/planta5.png");
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: bottom center;
-  animation-name: plantaCreciendo;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
+  height: 100vh;
 }
 .container-acerca .title-section > .subtitle {
   color: #006241;
@@ -317,13 +306,21 @@
     position: sticky;
     top: 0;
     left: 0;
-    background-size: 80%;
   }
 }
-@media screen and (min-width: 1366px) {
-  .container-acerca .title-section {
-    background-size: auto;
-  }
+.container-acerca .title-section .content-plant {
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  background-image: url("/images/ilustrativas/planta5.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: bottom center;
+  animation-name: plantaCreciendo;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
 }
 .container-acerca .acerca-container-infographic {
   background-color: #fff;
@@ -651,6 +648,7 @@ ul li {
 
 .title-green-xxl {
   font-size: 45px;
+  font-weight: bold;
   color: #006241;
 }
 @media screen and (min-width: 1024px) {
@@ -661,6 +659,7 @@ ul li {
 
 .title-green {
   font-size: 45px;
+  font-weight: bold;
   color: #006241;
   margin-bottom: 20px;
 }
@@ -670,15 +669,25 @@ ul li {
   }
 }
 
-.subtitle-green {
+.subtitle-green,
+.subtitle-green-xl {
   color: #006241;
-  font-size: 30px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
-  .subtitle-green {
+  .subtitle-green,
+.subtitle-green-xl {
     margin-bottom: 40px;
   }
+}
+
+.subtitle-green {
+  font-size: 22px;
+}
+
+.subtitle-green-xl {
+  font-size: 30px;
 }
 
 .parrafo {
@@ -695,6 +704,19 @@ ul li {
   .separador {
     margin-bottom: 40px;
   }
+}
+
+.content-list {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .content-list {
+    margin-bottom: 40px;
+  }
+}
+.content-list > li {
+  list-style: disc;
+  color: #55626D !important;
 }
 
 .footer {

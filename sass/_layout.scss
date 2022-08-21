@@ -161,6 +161,7 @@ ul li{
 
 .title-green-xxl{
     font-size: $font-size-xlarge;
+    font-weight: bold;
     color: $color-green;
 
     @media screen and (min-width: 1024px) {
@@ -170,6 +171,7 @@ ul li{
 
 .title-green{
     font-size: $font-size-xlarge;
+    font-weight: bold;
     color: $color-green;
     margin-bottom: 20px;
 
@@ -178,14 +180,23 @@ ul li{
     }
 }
 
-.subtitle-green{
+.subtitle-green,
+.subtitle-green-xl{
     color: $color-green;
-    font-size: 30px;
+    
+    font-weight: bold;
     margin-bottom: 20px;
 
     @media screen and (min-width: 1024px) {
         margin-bottom: 40px;
     }
+}
+
+.subtitle-green{
+    font-size: $font-size-large;
+}
+.subtitle-green-xl{
+    font-size: 30px;
 }
 
 .parrafo{
@@ -202,6 +213,19 @@ ul li{
         margin-bottom: 40px;
     }
 }
+
+.content-list{
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 40px;
+    }
+
+    > li{
+        list-style: disc;
+        color: $color-gray !important;                
+    }
+} 
 
 .footer{
     display: flex;

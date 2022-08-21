@@ -26,6 +26,13 @@
         flex-direction: column;
         grid-gap: 30px;
 
+        @media  screen and (min-width: 1024px) { 
+            position: sticky;
+            top: 0;
+            left: 0;           
+            
+        }
+
         .title-sustentabilidad{            
             font-size: 30px;
             font-weight: 600;
@@ -66,18 +73,6 @@
         background-color: #fff;
         height: 100%;
         
-        .content-list{
-            margin-bottom: 20px;
-    
-            @media screen and (min-width: 1024px) {
-                margin-bottom: 40px;
-            }
-
-            > li{
-                list-style: disc;
-                color: $color-gray !important;                
-            }
-        } 
 
         .content-fundador{
             .container-photo{
