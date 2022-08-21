@@ -42,8 +42,7 @@
             
             >.item-menu{
                 font-size: 22px;
-                color: #fff;
-                opacity: 0.8;
+                
                 cursor: pointer;
                 display: flex;
                 flex-wrap: wrap;
@@ -53,21 +52,19 @@
                 width: 100%;                
 
                 hr{
-                    width: 50px;                    
+                    width: 50px;  
+                    opacity: 1;                  
                 }
 
                 a{
                     text-decoration: none;
-                    margin-left: 10px;
-                    color: #fff;
+                    margin-left: 10px;                    
                 }
 
-                &:hover{
-                    opacity: 1;
+                &:hover{                    
                     font-weight: 600;
 
                     hr{
-                        opacity: 1;
                         width: 60px;
                         height: 3px;
                     }
@@ -85,6 +82,48 @@
             }
         }
     }   
+}
+
+.navbar-white{
+    > .container-menu{
+        >.menu{
+            >.item-menu{                
+                color: rgba(#fff, 0.5);
+
+                a{
+                    color: rgba(#fff, 0.5);
+                }
+                
+                & .active,
+                &:hover{
+                    a,hr{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-green{
+    > .container-menu{
+        >.menu{
+            >.item-menu{                
+                color: rgba(#fff, 0.5);
+
+                a{
+                    color: rgba(#fff, 0.5);
+                }
+                
+                & .active,
+                &:hover{
+                    a{
+                        color: $color-green;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .toggle-menu{    
@@ -130,7 +169,6 @@
 }
 
 .mobile-menu{
-    //background-color: rgba(0,0,0, 0.8);
     background-color: $color-darkgreen;
 
     .container-menu > .menu > .item-menu{
