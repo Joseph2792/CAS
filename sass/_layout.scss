@@ -78,7 +78,7 @@ ul li{
             flex-wrap: wrap;
 
             transition: all ease-in-out 300ms;
-            padding: 0px 15px;
+            padding: 0px;
             
             @media screen and (min-width: 1024px){
                 padding: 0px 80px 0px 230px;                               
@@ -170,13 +170,16 @@ ul li{
 }
 
 .title-green{
-    font-size: $font-size-xlarge;
+    font-size: $font-size-medium;
     font-weight: bold;
     color: $color-green;
     margin-bottom: 20px;
-
-    @media screen and (min-width: 1024px) {
-        margin-bottom: 40px;
+    
+    @media screen and (min-width: 1366px) {
+        font-size: $font-size-large;
+    }
+    @media screen and (min-width: 1920px) {
+        font-size: $font-size-xlarge;
     }
 }
 
@@ -193,15 +196,27 @@ ul li{
 }
 
 .subtitle-green{
-    font-size: $font-size-large;
+    font-size: 16px;
+        
+    @media screen and (min-width: 1366px) {
+        font-size: $font-size-medium;
+    }
+    @media screen and (min-width: 1920px) {
+        font-size: $font-size-large;
+    }
 }
+
 .subtitle-green-xl{
     font-size: 30px;
 }
 
 .parrafo{
-    font-size: $font-size-short;
+    font-size: 12px;
     color: $color-gray;
+
+    @media screen and (min-width: 1366px) {
+        font-size: $font-size-short;
+    }
 }
 
 .separador{
