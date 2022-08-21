@@ -160,11 +160,15 @@ ul li{
 }
 
 .title-green-xxl{
-    font-size: $font-size-xlarge;
+    font-size: $font-size-large;
     font-weight: bold;
     color: $color-green;
 
     @media screen and (min-width: 1024px) {
+        font-size: $font-size-xlarge;
+    }
+    
+    @media screen and (min-width: 1920px) {
         font-size: $font-size-xxlarge;
     }
 }
@@ -175,7 +179,7 @@ ul li{
     color: $color-green;
     margin-bottom: 20px;
     
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1024px) {
         font-size: $font-size-large;
     }
     @media screen and (min-width: 1920px) {
@@ -198,7 +202,7 @@ ul li{
 .subtitle-green{
     font-size: 16px;
         
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1024px) {
         font-size: $font-size-medium;
     }
     @media screen and (min-width: 1920px) {
@@ -214,7 +218,7 @@ ul li{
     font-size: 12px;
     color: $color-gray;
 
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1024px) {
         font-size: $font-size-short;
     }
 }

@@ -216,12 +216,13 @@
   }
 }
 .content-sustentabilidad .content-sustentabilidad-info .content-fundador .nomb-fundador {
-  font-size: 45px;
+  font-size: 22px;
   margin-top: 20px;
 }
 @media screen and (min-width: 1024px) {
   .content-sustentabilidad .content-sustentabilidad-info .content-fundador .nomb-fundador {
     margin-top: 40px;
+    font-size: 45px;
   }
 }
 
@@ -251,10 +252,14 @@
 }
 .container-productos .content-product .products-img {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .container-productos .content-product .products-img img {
   width: 100%;
   height: auto;
+  margin: auto;
 }
 .container-productos .content-product .products-info {
   height: 100%;
@@ -629,11 +634,16 @@ ul li {
 }
 
 .title-green-xxl {
-  font-size: 45px;
+  font-size: 22px;
   font-weight: bold;
   color: #006241;
 }
 @media screen and (min-width: 1024px) {
+  .title-green-xxl {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 1920px) {
   .title-green-xxl {
     font-size: 80px;
   }
@@ -645,7 +655,7 @@ ul li {
   color: #006241;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1024px) {
   .title-green {
     font-size: 22px;
   }
@@ -672,7 +682,7 @@ ul li {
 .subtitle-green {
   font-size: 16px;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1024px) {
   .subtitle-green {
     font-size: 18px;
   }
@@ -691,7 +701,7 @@ ul li {
   font-size: 12px;
   color: #55626D;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1024px) {
   .parrafo {
     font-size: 14px;
   }
