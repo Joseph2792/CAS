@@ -779,6 +779,7 @@ ul li {
 }
 .navbar > .container-logo .logo-white,
 .navbar > .container-logo .logo-colour {
+  display: block;
   height: 100%;
   width: auto;
 }
@@ -846,6 +847,9 @@ ul li {
   }
 }
 
+.navbar-white > .container-logo > .logo-white {
+  background: url(/assets/logo-blanco.svg) no-repeat center;
+}
 .navbar-white > .container-menu > .menu > .item-menu {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -854,6 +858,19 @@ ul li {
 }
 .navbar-white > .container-menu > .menu > .item-menu .active a, .navbar-white > .container-menu > .menu > .item-menu .active hr, .navbar-white > .container-menu > .menu > .item-menu:hover a, .navbar-white > .container-menu > .menu > .item-menu:hover hr {
   color: #fff;
+}
+
+.navbar-green > .container-logo > .logo-colour {
+  background: url(/assets/logo-color.svg) no-repeat center;
+}
+.navbar-green > .container-menu > .menu > .item-menu {
+  color: rgba(85, 98, 109, 0.5);
+}
+.navbar-green > .container-menu > .menu > .item-menu hr, .navbar-green > .container-menu > .menu > .item-menu a {
+  color: rgba(85, 98, 109, 0.5);
+}
+.navbar-green > .container-menu > .menu > .item-menu .active a, .navbar-green > .container-menu > .menu > .item-menu:hover a {
+  color: #55626D;
 }
 
 .toggle-menu {

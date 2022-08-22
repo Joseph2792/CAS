@@ -14,6 +14,7 @@
 
         .logo-white,
         .logo-colour{
+            display: block;
             height: 100%;
             width: auto;
         }               
@@ -85,6 +86,12 @@
 }
 
 .navbar-white{
+    > .container-logo{        
+        >.logo-white{                        
+            background: url(/assets/logo-blanco.svg) no-repeat center;
+        }
+    }
+
     > .container-menu{
         >.menu{
             >.item-menu{                
@@ -106,19 +113,24 @@
 }
 
 .navbar-green{
+    > .container-logo{        
+        >.logo-colour{            
+            background: url(/assets/logo-color.svg) no-repeat center;
+        }
+    }
     > .container-menu{
         >.menu{
             >.item-menu{                
-                color: rgba(#fff, 0.5);
+                color: rgba($color-gray, 0.5);
 
-                a{
-                    color: rgba(#fff, 0.5);
-                }
-                
+                hr,a{
+                    color: rgba($color-gray, 0.5);
+                }                
+
                 & .active,
                 &:hover{
                     a{
-                        color: $color-green;
+                        color: $color-gray;
                     }
                 }
             }
