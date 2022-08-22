@@ -12,8 +12,7 @@
         height: 50px;
         width: auto;            
 
-        .logo-white,
-        .logo-colour{
+        .logo{
             display: block;
             height: 100%;
             width: auto;
@@ -87,7 +86,7 @@
 
 .navbar-white{
     > .container-logo{        
-        >.logo-white{                        
+        >.logo{                        
             background: url(/assets/logo-blanco.svg) no-repeat center;
         }
     }
@@ -114,7 +113,7 @@
 
 .navbar-green{
     > .container-logo{        
-        >.logo-colour{            
+        >.logo{            
             background: url(/assets/logo-color.svg) no-repeat center;
         }
     }

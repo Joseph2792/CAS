@@ -777,8 +777,7 @@ ul li {
   height: 50px;
   width: auto;
 }
-.navbar > .container-logo .logo-white,
-.navbar > .container-logo .logo-colour {
+.navbar > .container-logo .logo {
   display: block;
   height: 100%;
   width: auto;
@@ -847,7 +846,7 @@ ul li {
   }
 }
 
-.navbar-white > .container-logo > .logo-white {
+.navbar-white > .container-logo > .logo {
   background: url(/assets/logo-blanco.svg) no-repeat center;
 }
 .navbar-white > .container-menu > .menu > .item-menu {
@@ -860,7 +859,7 @@ ul li {
   color: #fff;
 }
 
-.navbar-green > .container-logo > .logo-colour {
+.navbar-green > .container-logo > .logo {
   background: url(/assets/logo-color.svg) no-repeat center;
 }
 .navbar-green > .container-menu > .menu > .item-menu {
