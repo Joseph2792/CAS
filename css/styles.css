@@ -848,9 +848,11 @@ ul li {
   text-decoration: none;
   margin-left: 10px;
 }
+.menu > .active,
 .menu > .item-menu:hover {
   font-weight: 600;
 }
+.menu > .active hr,
 .menu > .item-menu:hover hr {
   width: 60px;
   height: 3px;
@@ -881,7 +883,9 @@ ul li {
 .navbar-white > .menu > .item-menu a {
   color: rgba(255, 255, 255, 0.5);
 }
-.navbar-white > .menu > .item-menu .active a, .navbar-white > .menu > .item-menu .active hr, .navbar-white > .menu > .item-menu:hover a, .navbar-white > .menu > .item-menu:hover hr {
+.navbar-white > .menu > .active a, .navbar-white > .menu > .active hr,
+.navbar-white > .menu > .item-menu:hover a,
+.navbar-white > .menu > .item-menu:hover hr {
   color: #fff;
 }
 
@@ -894,7 +898,8 @@ ul li {
 .navbar-green > .menu > .item-menu hr, .navbar-green > .menu > .item-menu a {
   color: rgba(85, 98, 109, 0.5);
 }
-.navbar-green > .menu > .item-menu .active a, .navbar-green > .menu > .item-menu:hover a {
+.navbar-green > .menu > .active a,
+.navbar-green > .menu > .item-menu:hover a {
   color: #55626D;
 }
 

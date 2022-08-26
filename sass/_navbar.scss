@@ -151,14 +151,16 @@
             margin-left: 10px;                    
         }
 
-        &:hover{                    
-            font-weight: 600;
+    }
 
-            hr{
-                width: 60px;
-                height: 3px;
-            }
-        }       
+    > .active,
+    > .item-menu:hover{
+        font-weight: 600;
+
+        hr{
+            width: 60px;
+            height: 3px;
+        }
     }
 }
 
@@ -192,14 +194,14 @@
             a{
                 color: rgba(#fff, 0.5);
             }
+        }
             
-            & .active,
-            &:hover{
+        > .active,
+        >.item-menu:hover{
                 a,hr{
                     color: #fff;
                 }
             }
-        }
     }    
 }
 
@@ -216,13 +218,13 @@
 
             hr,a{
                 color: rgba($color-gray, 0.5);
-            }                
+            }
+        }
 
-            & .active,
-            &:hover{
-                a{
-                    color: $color-gray;
-                }
+        > .active,
+        >.item-menu:hover{
+            a{
+                color: $color-gray;
             }
         }
     }    
