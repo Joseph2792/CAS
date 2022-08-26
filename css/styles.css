@@ -433,6 +433,28 @@ ul li {
   flex-direction: column;
   grid-gap: 30px;
 }
+.content-sustentabilidad .content-section .content-sustentabilidad-title::after {
+  content: "";
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  left: 25%;
+  top: -2%;
+  background: url("/images/hoja.png") center no-repeat;
+  animation: hojasCayendo 5s ease-in-out;
+  animation-iteration-count: infinite;
+}
+.content-sustentabilidad .content-section .content-sustentabilidad-title::before {
+  content: "";
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  left: 75%;
+  top: -2%;
+  background: url("/images/hoja.png") center no-repeat;
+  animation: hojasCayendo 5s ease-in-out;
+  animation-iteration-count: infinite;
+}
 @media screen and (min-width: 1024px) {
   .content-sustentabilidad .content-section .content-sustentabilidad-title {
     position: sticky;
@@ -539,7 +561,29 @@ ul li {
   100% {
     opacity: 0;
     left: 0;
-    transform: rotate(45deg);
+    transform: rotate(30deg);
+  }
+}
+@keyframes hojasCayendo {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  25% {
+    opacity: 0.5;
+    top: 25%;
+  }
+  50% {
+    opacity: 1;
+    top: 50%;
+  }
+  75% {
+    opacity: 1;
+    top: 75%;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
   }
 }
 .container-productos {
@@ -623,8 +667,7 @@ ul li {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  animation-name: plantaCreciendo;
-  animation-duration: 5s;
+  animation: plantaCreciendo 5s ease-in-out;
   animation-iteration-count: infinite;
 }
 .container-acerca .content-section .acerca-container-infographic {
@@ -678,22 +721,24 @@ ul li {
 
 @keyframes plantaCreciendo {
   0% {
+    opacity: 0;
     background-image: url("/images/ilustrativas/planta5.png");
   }
-  20% {
+  25% {
+    opacity: 1;
     background-image: url("/images/ilustrativas/planta4.png");
   }
-  40% {
+  50% {
+    opacity: 1;
     background-image: url("/images/ilustrativas/planta3.png");
   }
-  60% {
+  75% {
+    opacity: 1;
     background-image: url("/images/ilustrativas/planta2.png");
   }
-  80% {
-    background-image: url("/images/ilustrativas/planta1.png");
-  }
   100% {
-    background-image: url("/images/ilustrativas/planta5.png");
+    background-image: url("/images/ilustrativas/planta1.png");
+    opacity: 0;
   }
 }
 .container-acerca-mision-vision {
@@ -771,7 +816,7 @@ ul li {
   width: 60px;
   display: block;
   background: url("/assets/logo-blanco.svg") no-repeat center;
-  background-size: contain;
+  background-size: contain !important;
 }
 @media screen and (min-width: 980px) {
   .header-logo .container-logo .logo {

@@ -29,6 +29,32 @@
             display: flex;
             flex-direction: column;
             grid-gap: 30px;
+
+            &::after{
+                content: '';
+                width: 20px;
+                height: 50px;
+
+                position:absolute ;
+                left: 25%;
+                top: -2%;
+                background: url('/images/hoja.png') center no-repeat;
+                animation: hojasCayendo 5s ease-in-out;
+                animation-iteration-count: infinite;
+            }
+
+            &::before{
+                content: '';
+                width: 20px;
+                height: 50px;
+
+                position:absolute ;
+                left: 75%;
+                top: -2%;
+                background: url('/images/hoja.png') center no-repeat;
+                animation: hojasCayendo 5s ease-in-out;
+                animation-iteration-count: infinite;
+            }
     
             @media  screen and (min-width: 1024px) { 
                 position: sticky;
@@ -150,7 +176,34 @@
     100%{
         opacity: 0;
         left: 0;
-        transform: rotate(45deg);
+        transform: rotate(30deg);
     }
 
+}
+
+@keyframes hojasCayendo {
+    0%{
+        opacity: 0;
+        top: 0;        
+    }
+
+    25%{
+        opacity: 0.5;
+        top: 25%;        
+    }
+
+    50%{
+        opacity: 1;
+        top: 50%;
+    }
+    
+    75%{
+        opacity: 1;
+        top: 75%;
+    }
+
+    100%{
+        opacity: 0;
+        top: 100%;
+    }
 }

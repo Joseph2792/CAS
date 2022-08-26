@@ -44,8 +44,7 @@
                 background-size: contain;
                 background-position: center;
     
-                animation-name: plantaCreciendo;
-                animation-duration: 5s;
+                animation: plantaCreciendo 5s ease-in-out;                
                 animation-iteration-count: infinite;
             }
         }
@@ -107,28 +106,28 @@
 
 @keyframes plantaCreciendo {
     0%{
+        opacity: 0;
         background-image: url('/images/ilustrativas/planta5.png');        
     }
-    20%{
+    25%{
+        opacity: 1;
         background-image: url('/images/ilustrativas/planta4.png');
 
     }
-    40%{
+    50%{
+        opacity: 1;
         background-image: url('/images/ilustrativas/planta3.png');
     }
 
-    60%{
+    75%{
+        opacity: 1;
         background-image: url('/images/ilustrativas/planta2.png');
 
     }
     
-    80%{
-        background-image: url('/images/ilustrativas/planta1.png');
-
-    }
-
     100%{
-        background-image: url('/images/ilustrativas/planta5.png');
+        background-image: url('/images/ilustrativas/planta1.png');
+        opacity: 0;        
     }
 }
 
