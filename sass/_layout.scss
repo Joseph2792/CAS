@@ -1,17 +1,5 @@
 @import "variables";
 
-// esto se puede tomar desde la cdn de google fonts que es gratis
-@font-face {
-    font-family: ‘Roboto-Regular’;
-       //src: url('fonts/ Nombre de la fuente.eot');
-       src: /*url('fonts/ Nombre de la fuente.eot?#iefix') format('embedded-opentype'),
-            url('fonts/ Nombre de la fuente.woff') format('woff'),
-            url('fonts/ Nombre de la fuente.ttf') format('truetype'),*/
-            url('/assets/fonts/Roboto-Regular.ttf') format('svg');
-      font-weight: normal;
-      font-style: normal;
-}
-
 * {
     box-sizing: border-box;    
 }
@@ -36,31 +24,11 @@ ul li{
 }
 
 .cas-body{
-    
-    .navbar{
-        position: fixed;
-        z-index: 10;
-        left: 0;
-        top: 0;
-        height: 100%;
-        min-width: 60px;
-                
-        @media screen and (min-width: 1024px){
-            width: 150px; 
-            
-        }
-        @media screen and (min-width: 1366px){
-            width: 200px; 
-        }
-        @media screen and (min-width: 1920px){
-            width: 300px; 
-        }      
-    }
+    position: relative;   
 
     .container-main{
         height: 100%;
-        width: 100vw;
-        background-color: #fff;
+        width: 100vw;        
 
         .container-home,
         .container-sustentabilidad,
@@ -89,34 +57,15 @@ ul li{
                 margin: auto;
                 
                 @media screen and (min-width: 980px) {
-                    width: 70vw;
+                    width: calc(100vw - 480px);
+                    margin-left: 320px;
                     border-left: 1px solid #fff;
                     border-right: 1px solid #fff;            
                 }
             }
             
         }                        
-    }
-
-    .toggle-menu{        
-        width: 60px;
-        height: 60px;
-        position: fixed; 
-        z-index: 10;       
-        right: 0;
-        top: 0;
-        
-        @media screen and (min-width: 1024px){
-            width: 80px;
-            height: 100vh;             
-        }
-        @media screen and (min-width: 1366px){
-            width: 100px;
-        }  
-        @media screen and (min-width: 1920px){
-            width: 160px;
-        }  
-    }
+    }    
 }
 
 .content-column{
