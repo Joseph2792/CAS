@@ -1,165 +1,134 @@
 @import "variables";
 
 .container-acerca{
-    position: relative;
-    width: 100%;    
-    height: auto;
+    position: relative;      
+    height: auto !important;
 
-    background-color: rgba($color-lightgreen, 0.05);
+    background-color: #F9FCF4;
     
-    .title-section{        
-        height: 100vh;
+    .content-section{
+        position: relative;
+        height: auto;
 
-        >.subtitle{
-            color: $color-green;
-            margin-bottom: 30px;
-            font-size: 40px;
-            font-weight: 600;
-        }
-
-        >.parrafo{
-            color: $color-gray;
-        }
-        
-        @media  screen and (min-width: 1024px) { 
-            position: sticky;
-            top: 0;
-            left: 0;           
-            
-        }
-
-        .content-plant{
-            height: 300px;
-            width: 300px;
-
-            margin: auto;
-            position: absolute;
-            bottom: 0;
+        .title-section{        
+            height: 100vh;
     
-            background-image: url('/images/ilustrativas/planta5.png');
-            background-repeat: no-repeat;
-            background-size: 50%;
-            background-position: bottom center;
-
-            animation-name: plantaCreciendo;
-            animation-duration: 5000ms;
-            animation-iteration-count: infinite;
-        }
-    }
-
-    .acerca-container-infographic{        
-        background-color: #fff;
-                
-        >.content-infographic-data{
-            border-bottom: 1px solid $color-darkgreen;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            padding: 30px 0px;
-
-            &:last-child{
-                border-bottom: none;
-            }
-
-            &:nth-of-type(2n){
-                .infographic-fecha{
-                    color: $color-green;
-                }
-            }
-
-            &:first-child{
-                padding-top: 0px;
-            }
-            
-            .infographic-fecha{                
-                margin-bottom: 20px;                
-                font-size: 30px;
+            >.subtitle{
+                color: $color-green;
+                margin-bottom: 30px;
+                font-size: 40px;
                 font-weight: 600;
-            
-                @media  screen and (min-width: 1024px){
-                    font-size: 50px;
-                }
-                @media  screen and (min-width: 1366px){
-                    font-size: $font-size-xxlarge;
-                }        
-            }
-
-            .infographic-text{
-                color: $color-gray;
-                font-size: $font-size-short;                
-            }
-
-            @media  screen and (min-width: 1024px) {                                    
-                padding: 40px 0px;            
             }
     
-            @media  screen and (min-width: 1366px) {         
-                padding: 60px 0px;                
+            >.parrafo{
+                color: $color-gray;
+            }
+            
+            @media  screen and (min-width: 1024px) { 
+                position: sticky;
+                top: 0;
+                left: 0;           
+                
+            }
+    
+            .content-plant{
+                height: 300px;
+                width: 300px;
+    
+                margin: auto;
+                position: absolute;
+                bottom: 0;
+        
+                background-image: url('/images/ilustrativas/planta5.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+    
+                animation-name: plantaCreciendo;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+        }
+    
+        .acerca-container-infographic{        
+            background-color: #fff;
+                    
+            >.content-infographic-data{
+                border-bottom: 1px solid $color-darkgreen;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                padding: 30px 0px;
+    
+                &:last-child{
+                    border-bottom: none;
+                }
+    
+                &:nth-of-type(2n){
+                    .infographic-fecha{
+                        color: $color-green;
+                    }
+                }
+    
+                &:first-child{
+                    padding-top: 0px;
+                }
+                
+                .infographic-fecha{                
+                    margin-bottom: 20px;                
+                    font-size: 30px;
+                    font-weight: 600;
+                
+                    @media  screen and (min-width: 1024px){
+                        font-size: 50px;
+                    }
+                    @media  screen and (min-width: 1366px){
+                        font-size: $font-size-xxlarge;
+                    }        
+                }
+    
+                .infographic-text{
+                    color: $color-gray;
+                    font-size: $font-size-short;                
+                }
+    
+                @media  screen and (min-width: 1024px) {                                    
+                    padding: 40px 0px;            
+                }
+        
+                @media  screen and (min-width: 1366px) {         
+                    padding: 60px 0px;                
+                }
             }
         }
     }
+
 }
 
 @keyframes plantaCreciendo {
     0%{
-        background-image: url('/images/ilustrativas/planta5.png');
-        background-size: 50%;
-
-        @media  screen and (min-width: 1024px) {            
-            background-size: 80%;
-        }
-
-        @media  screen and (min-width: 1366px) {                  
-            background-size: auto;            
-        }
+        background-image: url('/images/ilustrativas/planta5.png');        
     }
-    25%{
+    20%{
         background-image: url('/images/ilustrativas/planta4.png');
-        background-size: 50%;
-        
-        @media  screen and (min-width: 1024px) {            
-            background-size: 80%;
-        }
 
-        @media  screen and (min-width: 1366px) {                  
-            background-size: auto;            
-        }
     }
-    50%{
+    40%{
         background-image: url('/images/ilustrativas/planta3.png');
-        background-size: 50%;
-        
-        @media  screen and (min-width: 1024px) {            
-            background-size: 80%;
-        }
-
-        @media  screen and (min-width: 1366px) {                  
-            background-size: auto;            
-        }
     }
-    75%{
+
+    60%{
         background-image: url('/images/ilustrativas/planta2.png');
-        background-size: 50%;
-        
-        @media  screen and (min-width: 1024px) {            
-            background-size: 80%;
-        }
 
-        @media  screen and (min-width: 1366px) {                  
-            background-size: auto;            
-        }
     }
-    100%{
+    
+    80%{
         background-image: url('/images/ilustrativas/planta1.png');
-        background-size: 50%;
-        
-        @media  screen and (min-width: 1024px) {            
-            background-size: 80%;
-        }
 
-        @media  screen and (min-width: 1366px) {                  
-            background-size: auto;            
-        }
+    }
+
+    100%{
+        background-image: url('/images/ilustrativas/planta5.png');
     }
 }
 

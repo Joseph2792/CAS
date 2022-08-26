@@ -2,104 +2,110 @@
 
 .container-sustentabilidad{
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     background-image: url("/images/background/fondo2.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: cover;   
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;   
 
-    position: relative;    
+    .content-section{
+        position: relative;    
+    }
 }
 
-.content-sustentabilidad{
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
+.content-sustentabilidad{    
+    height: auto !important;
+    
     background-color: $color-darkgreen;
-
-    .content-sustentabilidad-title{
+    
+    .content-section{   
+        height: 100%;     
         display: flex;
-        flex-direction: column;
-        grid-gap: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-        @media  screen and (min-width: 1024px) { 
-            position: sticky;
-            top: 0;
-            left: 0;           
-            
-        }
-
-        .title-sustentabilidad{            
-            font-size: 30px;
-            font-weight: 600;
+        .content-sustentabilidad-title{
             display: flex;
-        
-            @media  screen and (min-width: 1024px){
-                font-size: 50px;
-                flex-direction: column;
+            flex-direction: column;
+            grid-gap: 30px;
+    
+            @media  screen and (min-width: 1024px) { 
+                position: sticky;
+                top: 0;
+                left: 0;           
+                
             }
-            @media  screen and (min-width: 1366px){
-                font-size: $font-size-xlarge;
-            } 
-
-            p{
-                line-height: normal;
-                color: $color-lightgreen;
-
-                &:first-child{
-                    color: #fff !important;
-                }                
+    
+            .title-sustentabilidad{            
+                font-size: 30px;
+                font-weight: 600;
+                display: flex;
+            
+                @media  screen and (min-width: 1024px){
+                    font-size: 50px;
+                    flex-direction: column;
+                }
+                @media  screen and (min-width: 1366px){
+                    font-size: $font-size-xlarge;
+                } 
+    
+                p{
+                    line-height: normal;
+                    color: $color-lightgreen;
+    
+                    &:first-child{
+                        color: #fff !important;
+                    }                
+                }
+            }
+    
+            .info-white{
+                color: #fff;
+                font-size: $font-size-medium;
+            }
+    
+            .card-info{
+                background-color: rgba(#fff, .1);
+                font-size: $font-size-medium;
+                color: #fff;
+                padding: 20px;
             }
         }
-
-        .info-white{
-            color: #fff;
-            font-size: $font-size-medium;
-        }
-
-        .card-info{
-            background-color: rgba(#fff, .1);
-            font-size: $font-size-medium;
-            color: #fff;
-            padding: 20px;
-        }
+    
+        .content-sustentabilidad-info{
+            background-color: #fff;
+            height: 100%;
+            
+    
+            .content-fundador{
+                .container-photo{
+                    height: 120px;
+                    width: 120px;
+                    margin: 30px 0px;
+    
+                    >img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                    
+                    @media screen and (min-width: 1024px) {
+                        height: 180px;
+                        width: 180px;
+                    }
+                }
+    
+                .nomb-fundador{
+                    font-size: $font-size-large;
+                    margin-top: 20px;
+    
+                    @media screen and (min-width: 1024px) {
+                        margin-top: 40px;
+                        font-size: $font-size-xlarge;
+                    }
+                }
+            }
+        }    
     }
 
-    .content-sustentabilidad-info{
-        background-color: #fff;
-        height: 100%;
-        
-
-        .content-fundador{
-            .container-photo{
-                height: 120px;
-                width: 120px;
-                margin: 30px 0px;
-
-                >img{
-                    height: 100%;
-                    width: 100%;
-                }
-                
-                @media screen and (min-width: 1024px) {
-                    height: 180px;
-                    width: 180px;
-                }
-            }
-
-            .nomb-fundador{
-                font-size: $font-size-large;
-                margin-top: 20px;
-
-                @media screen and (min-width: 1024px) {
-                    margin-top: 40px;
-                    font-size: $font-size-xlarge;
-                }
-            }
-        }
-    }    
 }

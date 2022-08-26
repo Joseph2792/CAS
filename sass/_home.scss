@@ -1,44 +1,63 @@
 @import "variables";
 
-.container-home{
-    width: 100%;
-    height: 100%;
-    
-    background-image: url("/images/background/fondo1.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: cover;
-    
+.container-home{   
     position: relative;
 
-    @media screen and (min-width: 1024px) {
-        flex-direction: row-reverse !important;    
+    width: 100%;
+    height: 100vh;
+
+
+    .content-section{   
+        position: relative;
+           
+        .cont-parrafo{            
+            height: 100%;  
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+                    
+            align-items: flex-end;
+    
+            .parrafo{
+                color: #fff;
+                font-size: $font-size-medium;
+                
+                width: fit-content;
+                height: fit-content;
+                
+                padding: 20px 30px;
+                margin-bottom: 30px;
+            }
+    
+            @media  screen and (min-width: 1024px) {
+                left: 50%;
+                width: 50%;
+                border-left: 1px solid #fff;
+            }
+        }
     }
 
-    .cont-parrafo{
-        height: 100%;  
+}
+
+.content-video{
+    position: fixed;
+    left: 0;
+    top: 0;     
+    z-index: 0;
+    width: 100vw;
+    height: 100%;
+    background: rgb(0, 0, 0);
+
+    video{
         width: 100%;
-        
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-                
-        align-items: flex-end;
-
-        .parrafo{
-            color: #fff;
-            font-size: $font-size-medium;
-            
-            width: fit-content;
-            height: fit-content;
-            
-            padding: 20px 30px;
-            margin-bottom: 30px;
-        }
-
-        @media  screen and (min-width: 1024px) {
-            width: 50%;
-            border-left: 1px solid #fff;
-        }
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.75;
+        pointer-events: none;
     }
 }
