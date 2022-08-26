@@ -435,24 +435,26 @@ ul li {
 }
 .content-sustentabilidad .content-section .content-sustentabilidad-title::after {
   content: "";
-  width: 20px;
-  height: 50px;
+  width: 30px;
+  height: 60px;
   position: absolute;
   left: 25%;
   top: -2%;
   background: url("/images/hoja.png") center no-repeat;
-  animation: hojasCayendo 5s ease-in-out;
+  background-size: contain;
+  animation: hojasCayendo 10s ease-in-out;
   animation-iteration-count: infinite;
 }
 .content-sustentabilidad .content-section .content-sustentabilidad-title::before {
   content: "";
-  width: 20px;
-  height: 50px;
+  width: 30px;
+  height: 60px;
   position: absolute;
   left: 75%;
   top: -2%;
   background: url("/images/hoja.png") center no-repeat;
-  animation: hojasCayendo 5s ease-in-out;
+  background-size: contain;
+  animation: hojasCayendo 6s ease-in-out;
   animation-iteration-count: infinite;
 }
 @media screen and (min-width: 1024px) {
@@ -568,22 +570,23 @@ ul li {
   0% {
     opacity: 0;
     top: 0;
+    transform: rotate(0deg);
   }
   25% {
     opacity: 0.5;
-    top: 25%;
+    transform: rotate(20deg);
   }
   50% {
     opacity: 1;
-    top: 50%;
   }
   75% {
     opacity: 1;
-    top: 75%;
+    transform: rotate(-20deg);
   }
   100% {
     opacity: 0;
     top: 100%;
+    transform: rotate(0deg);
   }
 }
 .container-productos {
