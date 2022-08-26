@@ -109,3 +109,48 @@
     }
 
 }
+
+.content-plant-regando{
+    position: relative;
+    margin-top: 100px;
+
+    .arbol{
+        height: 400px;
+        width: 300px;
+        background: url('/images/arbol.png') no-repeat center;
+        background-size: contain;
+    }
+
+
+    .regadera{
+        position: absolute;
+        left: -100%;
+        top: 0;
+        height: 230px;
+        width: 260px;
+        background: url('/images/regadera.png') no-repeat center;
+        background-size: contain;
+
+        animation: regando 5s ease-in;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes regando {
+    0%{
+        opacity: 0;
+        left: -100%;
+        transform: rotate(0deg);
+    }
+    50%{
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+    }
+    100%{
+        opacity: 0;
+        left: 0;
+        transform: rotate(45deg);
+    }
+
+}
