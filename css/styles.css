@@ -642,7 +642,7 @@ ul li {
   height: auto;
 }
 .container-acerca .content-section .title-section {
-  height: 100vh;
+  height: auto;
 }
 .container-acerca .content-section .title-section > .subtitle {
   color: #006241;
@@ -653,8 +653,9 @@ ul li {
 .container-acerca .content-section .title-section > .parrafo {
   color: #55626D;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 980px) {
   .container-acerca .content-section .title-section {
+    height: 100vh;
     position: sticky;
     top: 0;
     left: 0;
@@ -664,8 +665,16 @@ ul li {
   height: 300px;
   width: 300px;
   margin: auto;
-  position: absolute;
-  bottom: 0;
+  margin-top: 100px;
+}
+@media screen and (min-width: 980px) {
+  .container-acerca .content-section .title-section .content-plant {
+    margin-top: 300px;
+  }
+}
+.container-acerca .content-section .title-section .content-plant .planta {
+  height: 300px;
+  width: auto;
   background-image: url("/images/ilustrativas/planta5.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -726,22 +735,27 @@ ul li {
   0% {
     opacity: 0;
     background-image: url("/images/ilustrativas/planta5.png");
+    background-size: 20%;
   }
   25% {
     opacity: 1;
     background-image: url("/images/ilustrativas/planta4.png");
+    background-size: 30%;
   }
   50% {
     opacity: 1;
     background-image: url("/images/ilustrativas/planta3.png");
+    background-size: 35%;
   }
   75% {
     opacity: 1;
     background-image: url("/images/ilustrativas/planta2.png");
+    background-size: 40%;
   }
   100% {
     background-image: url("/images/ilustrativas/planta1.png");
-    opacity: 0;
+    opacity: 1;
+    background-size: 45%;
   }
 }
 .container-acerca-mision-vision {
