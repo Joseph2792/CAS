@@ -57,6 +57,13 @@
                     >.title-form{
                         width: 100%;
                         color: #fff;
+                        padding: 10px;
+
+                        >span{
+                            width: 100%;
+                            display: block;
+                            text-align: center;
+                        }
     
                         @media screen and (min-width:1024px) {
                             width: 20%;
@@ -94,7 +101,7 @@
         color: #fff;
 
         @media screen and (min-width: 1024px) {
-            font-size: $font-size-xlarge;
+            font-size: $font-size-xlarge;            
         }
         
         @media screen and (min-width: 1920px) {
