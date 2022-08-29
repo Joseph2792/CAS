@@ -10,6 +10,8 @@ const getElement =  (selector, type = null) => {
 //llamo a la barras del toggle
 const barsToggle = getElement('.fa-window-minimize','all');
 
+const itemsMenu = getElement('.item-menu',"all");
+
 //tansformo el boton toggle en close
 const transformarCerrar = () => {
     for (let i = 0; i < barsToggle.length; i++) {
@@ -34,17 +36,24 @@ const transformarToggle = () => {
     }
 }
 
+const navbar = getElement('#cont-menu');
+const menu = getElement('#cont-menu');
+const logo = getElement('#cas-header');
+
 //muestro y oculto el menu
-const menuFlotante = (evt) => {
-    const navbar = getElement('#cont-menu');
+const menuFlotante = () => {    
     const tieneClase = navbar.classList.contains('menu-flotante');
     
     if(tieneClase){
-        navbar.classList.remove('menu-flotante');
-        transformarToggle();        
+        navbar.classList.remove('menu-flotante'); 
+        menu.classList.remove('navbar-white-flotante');
+        logo.classList.remove('navbar-white-flotante');       
+        transformarToggle();
     }else{
-        navbar.classList.add("menu-flotante");
-        transformarCerrar();
+        navbar.classList.add("menu-flotante");  
+        menu.classList.add('navbar-white-flotante');
+        logo.classList.add('navbar-white-flotante');      
+        transformarCerrar();        
     }        
 }
 
@@ -53,3 +62,68 @@ const buttonToggle = getElement('#btn-toggle-menu');
 buttonToggle.addEventListener("click", menuFlotante);
 
 
+const cambiarLogoPorSeccion = (data) => {    
+    const tieneMenuFlotante = navbar.classList.contains('menu-flotante');
+    
+    menu.classList.remove('navbar-white');
+    menu.classList.remove('navbar-green');
+    logo.classList.remove('navbar-white');
+    logo.classList.remove('navbar-green');
+
+    if(tieneMenuFlotante){
+        navbar.classList.remove('menu-flotante');
+        transformarToggle();
+    }
+
+    switch (data){
+        case 'section-home':        
+            menu.classList.add('navbar-white');
+            logo.classList.add('navbar-white');
+            console.log("home");
+            break;
+        case 'section-acerca':
+            menu.classList.add('navbar-green');
+            logo.classList.add('navbar-green');
+            console.log("acerca");
+            break;
+        case 'section-productos':
+            menu.classList.add('navbar-green');
+            logo.classList.add('navbar-green');
+            console.log("productos");
+            break;
+        case 'section-sustentabilidad':
+            menu.classList.add('navbar-white');
+            logo.classList.add('navbar-white');
+            console.log("productos");
+            break;
+        case 'section-contacto':
+            menu.classList.add('navbar-white');
+            logo.classList.add('navbar-white');
+            console.log("contacto");
+            break;
+    }    
+}
+
+const selectItemMenu = (evt) => {
+    for(let item of itemsMenu){
+        item.classList.remove("active");
+    }    
+
+    evt.currentTarget.classList.add("active");    
+    
+    const nameSeccion = evt.currentTarget.getAttribute("data-target");      
+
+    cambiarLogoPorSeccion(nameSeccion);
+    
+}
+
+for(const item of itemsMenu){
+    item.addEventListener("click", selectItemMenu);
+}
+
+//---obtengo posicione de las secciones de la home
+
+// const posicionHome = document.querySelector("#section-home").getBoundingClientRect().top;
+// const posicionAcerca = document.querySelector("#section-acerca").getBoundingClientRect().top;
+// const posicionProductos = document.querySelector("#section-productos").getBoundingClientRect().top;
+// const posicionContacto = document.querySelector("#section-contacto").getBoundingClientRect().top;
