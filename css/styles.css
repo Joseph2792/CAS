@@ -101,15 +101,15 @@ ul li {
   position: absolute;
   font-size: 45px;
   color: #fff;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 1024px) {
   .title-xxl {
     font-size: 80px;
-    top: 45%;
-    left: 54%;
+    top: 50%;
+    left: 50%;
   }
 }
 
@@ -261,6 +261,8 @@ ul li {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-padding: 10px;
+  margin-left: -1px;
+  width: calc(100% + 1px) !important;
 }
 .container-contacto .content-section .container-tabwizar::-webkit-scrollbar {
   display: none;
@@ -332,7 +334,7 @@ ul li {
 }
 
 .nav-pills {
-  width: 100%;
+  width: calc(100% + 1px);
   height: 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -359,6 +361,7 @@ ul li {
   position: relative;
   font-size: 22px !important;
   padding: 10px;
+  transition: all 0.8s;
 }
 @media screen and (min-width: 1024px) {
   .nav-pills .nav-item .nav-link {
@@ -371,7 +374,7 @@ ul li {
   left: 5px;
   color: #fff !important;
 }
-.nav-pills .nav-item .active,
+.nav-pills .nav-item .active, .nav-pills .nav-item:hover .nav-link,
 .nav-pills .nav-item .nav-link:hover {
   font-weight: 600;
   background-color: #8FBD28 !important;

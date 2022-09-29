@@ -62,7 +62,7 @@ const buttonToggle = getElement('#btn-toggle-menu');
 buttonToggle.addEventListener("click", menuFlotante);
 
 
-const cambiarLogoPorSeccion = (data) => {    
+const cambiarLogoPorSeccion = (data) => {   
     const tieneMenuFlotante = navbar.classList.contains('menu-flotante');
     
     menu.classList.remove('navbar-white');

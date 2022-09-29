@@ -32,6 +32,9 @@
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
             scroll-padding: 10px;
+
+            margin-left: -1px;
+            width: calc(100% + 1px) !important;
     
             &::-webkit-scrollbar {
                 display: none;
@@ -111,7 +114,7 @@
 }
 
 .nav-pills{
-    width: 100%;
+    width: calc(100% + 1px);
     height: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -137,10 +140,12 @@
             position: relative;
             font-size: $font-size-large !important;
             padding: 10px;
+            transition: all 0.8s;
 
             @media screen and (min-width: 1024px){
                 padding: 0px;
             }
+            
             .numberTab{
                 position: absolute;
                 top: 5px;
@@ -150,6 +155,7 @@
         }
 
         .active,
+        &:hover .nav-link,
         .nav-link:hover{
                 font-weight: 600;
                 background-color: $color-lightgreen !important;
