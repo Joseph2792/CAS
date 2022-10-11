@@ -141,7 +141,7 @@
     
     > .item-menu{
         width: 100%;                
-        padding: 10px;
+        padding: 10px 10px 10px 15px;
         
         display: flex;        
         flex-wrap: wrap;
@@ -166,6 +166,8 @@
     > .active,
     > .item-menu:hover{
         font-weight: 600;
+        margin-left: -15px;
+        transition: all 0.8s;
 
         hr{
             width: 60px;
@@ -192,6 +194,7 @@
 
 .navbar-green{
     transition: all 0.5s ease;
+
     > .container-logo{        
         >.logo{            
             background: url(/assets/logo-color.svg) no-repeat center;
@@ -219,6 +222,7 @@
 .navbar-white-flotante,
 .navbar-white{
     transition: all 0.5s ease;
+
     > .container-logo{        
         >.logo{                        
             background: url(/assets/logo-blanco.svg) no-repeat center;

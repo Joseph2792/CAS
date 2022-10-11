@@ -949,7 +949,7 @@ ul li {
 }
 .menu > .item-menu {
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 10px 15px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -968,6 +968,8 @@ ul li {
 .menu > .active,
 .menu > .item-menu:hover {
   font-weight: 600;
+  margin-left: -15px;
+  transition: all 0.8s;
 }
 .menu > .active hr,
 .menu > .item-menu:hover hr {

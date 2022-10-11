@@ -60,7 +60,10 @@ const menuFlotante = () => {
 
 //obtengo el boton del menu
 buttonToggle.addEventListener("click", menuFlotante);
-
+const itemAcerca = getElement('#navItemAcerca');
+const itemSustentabilidad = getElement('#navItemSustentabilidad');
+const itemProducto = getElement('#navItemProductos');
+const itemContacto = getElement('#navItemContacto'); 
 
 const removerClass = () => {
     menu.classList.remove('navbar-white');
@@ -73,6 +76,7 @@ const cambiarLogoPorSeccion = (data) => {
     const tieneMenuFlotante = navbar.classList.contains('menu-flotante');
     
     removerClass();
+    itemsMenu.classList.remove('active');
 
     if(tieneMenuFlotante){
         navbar.classList.remove('menu-flotante');
@@ -84,28 +88,32 @@ const cambiarLogoPorSeccion = (data) => {
             menu.classList.add('navbar-white');
             logo.classList.add('navbar-white');
             buttonToggle.classList.remove('btn-toggle-green');
+            itemsMenu.classList.remove('active');            
             break;
         case 'section-acerca':
             menu.classList.add('navbar-green');
             logo.classList.add('navbar-green');
             buttonToggle.classList.add('btn-toggle-green');
-            
+            itemAcerca.classList.add('active');
             break;
         case 'section-productos':
             menu.classList.add('navbar-green');
             logo.classList.add('navbar-green');
             buttonToggle.add('btn-toggle-green');
             buttonToggle.classList.remove('btn-toggle-green');
+            itemProducto.classList.remove('active');
             break;
         case 'section-sustentabilidad':
             menu.classList.add('navbar-white');
             logo.classList.add('navbar-white');
             buttonToggle.classList.remove('btn-toggle-green');
+            itemSustentabilidad.classList.add('active');
             break;
         case 'section-contacto':
             menu.classList.add('navbar-white');
             logo.classList.add('navbar-white');
             buttonToggle.classList.remove('btn-toggle-green');
+            itemContacto.classList.add('active');
             break;
     }    
 }
@@ -136,15 +144,23 @@ const contacto = document.querySelector("#section-contacto");
 //---consulto si los elementos estan dentro de la ventana 
 const isInViewport = (elem) =>{
     var distance = elem.getBoundingClientRect();
-    
+    console.log(elem);
     return (
         distance.top < (window.innerHeight || document.documentElement.clientHeight) && distance.bottom > 0
     );
 }
 
+const removerClassItems = () =>{
+    itemAcerca.classList.remove('active');
+    itemSustentabilidad.classList.remove('active');
+    itemProducto.classList.remove('active');
+    itemContacto.classList.remove('active');
+}
+
 const detectarElement = () =>{
     removerClass();
-    
+    //removerClassItems();
+        
     if (isInViewport(home) 
     || isInViewport(sustentabilidad) 
     || isInViewport(contentSustentabilidad)
@@ -163,6 +179,34 @@ const detectarElement = () =>{
         buttonToggle.classList.add('btn-toggle-green');
 
     }  
+
+    if (isInViewport(home)){
+        removerClassItems();
+
+    } else if (isInViewport(acerca)){        
+        removerClassItems();
+        itemAcerca.classList.add('active');
+
+    }else if (isInViewport(misionVision)){
+        removerClassItems();
+        itemAcerca.classList.add('active');
+
+    }else if (isInViewport(sustentabilidad) ){
+        removerClassItems();
+        itemSustentabilidad.classList.add('active');
+
+    }else if (isInViewport(contentSustentabilidad)){
+        removerClassItems();
+        itemSustentabilidad.classList.add('active');
+
+    }else if (isInViewport(productos)){        
+        removerClassItems();
+        itemProducto.classList.add('active');
+
+    } else if (isInViewport(contacto)){
+        removerClassItems();
+        itemContacto.classList.add('active');
+    } 
 }
 
 window.addEventListener("scroll", detectarElement);
