@@ -2,9 +2,9 @@
 //funcion generica para llamar a los elementos del dom
 const getElement =  (selector, type = null) => {
     if(type == 'all'){
-        return document.querySelectorAll(selector);
+        return document.querySelectorAll(selector)
     }
-    return document.querySelector(selector);
+    return document.querySelector(selector)
 }
 
 //llamo a la barras del toggle
@@ -62,13 +62,17 @@ const buttonToggle = getElement('#btn-toggle-menu');
 buttonToggle.addEventListener("click", menuFlotante);
 
 
-const cambiarLogoPorSeccion = (data) => {   
-    const tieneMenuFlotante = navbar.classList.contains('menu-flotante');
-    
+const removerClass = () => {
     menu.classList.remove('navbar-white');
     menu.classList.remove('navbar-green');
     logo.classList.remove('navbar-white');
     logo.classList.remove('navbar-green');
+}
+
+const cambiarLogoPorSeccion = (data) => {   
+    const tieneMenuFlotante = navbar.classList.contains('menu-flotante');
+    
+    removerClass();
 
     if(tieneMenuFlotante){
         navbar.classList.remove('menu-flotante');
@@ -107,23 +111,54 @@ const cambiarLogoPorSeccion = (data) => {
 const selectItemMenu = (evt) => {
     for(let item of itemsMenu){
         item.classList.remove("active");
-    }    
-
-    evt.currentTarget.classList.add("active");    
-    
+    }
+    evt.currentTarget.classList.add("active");       
     const nameSeccion = evt.currentTarget.getAttribute("data-target");      
-
-    cambiarLogoPorSeccion(nameSeccion);
-    
+    cambiarLogoPorSeccion(nameSeccion);    
 }
 
 for(const item of itemsMenu){
     item.addEventListener("click", selectItemMenu);
 }
 
-//---obtengo posicione de las secciones de la home
+//---obtengo posicione de las secciones 
+const bodyCAS = document.querySelector('#container-bodyCAS');
+const home = document.querySelector("#section-home");
+const acerca = document.querySelector("#section-acerca");
+const misionVision = document.querySelector("#section-mision-vision");
+const sustentabilidad = document.querySelector("#section-sustentabilidad");
+const contentSustentabilidad = document.querySelector("#section-content-sustentabilidad");
+const productos = document.querySelector("#section-productos");
+const contacto = document.querySelector("#section-contacto");
 
-// const posicionHome = document.querySelector("#section-home").getBoundingClientRect().top;
-// const posicionAcerca = document.querySelector("#section-acerca").getBoundingClientRect().top;
-// const posicionProductos = document.querySelector("#section-productos").getBoundingClientRect().top;
-// const posicionContacto = document.querySelector("#section-contacto").getBoundingClientRect().top;
+//---consulto si los elementos estan dentro de la ventana 
+const isInViewport = (elem) =>{
+    var distance = elem.getBoundingClientRect();
+    
+    return (
+        distance.top < (window.innerHeight || document.documentElement.clientHeight) && distance.bottom > 0
+    );
+}
+
+const detectarElement = () =>{
+    removerClass();
+    
+    if (isInViewport(home) 
+    || isInViewport(sustentabilidad) 
+    || isInViewport(contentSustentabilidad)
+    || isInViewport(contacto)) {    
+        
+        menu.classList.add('navbar-white');
+        logo.classList.add('navbar-white');
+
+    }else if (isInViewport(acerca)
+    || isInViewport(misionVision)
+    || isInViewport(productos)){   
+        
+        menu.classList.add('navbar-green');
+        logo.classList.add('navbar-green');
+
+    }  
+}
+
+window.addEventListener("scroll", detectarElement);
