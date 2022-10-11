@@ -1034,4 +1034,8 @@ ul li {
   color: #fff;
 }
 
+.btn-toggle-green > i {
+  color: #55626D !important;
+}
+
 /*# sourceMappingURL=styles.css.map */

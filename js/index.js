@@ -39,6 +39,7 @@ const transformarToggle = () => {
 const navbar = getElement('#cont-menu');
 const menu = getElement('#cont-menu');
 const logo = getElement('#cas-header');
+const buttonToggle = getElement('#btn-toggle-menu');
 
 //muestro y oculto el menu
 const menuFlotante = () => {    
@@ -58,7 +59,6 @@ const menuFlotante = () => {
 }
 
 //obtengo el boton del menu
-const buttonToggle = getElement('#btn-toggle-menu');
 buttonToggle.addEventListener("click", menuFlotante);
 
 
@@ -83,27 +83,29 @@ const cambiarLogoPorSeccion = (data) => {
         case 'section-home':        
             menu.classList.add('navbar-white');
             logo.classList.add('navbar-white');
-            console.log("home");
+            buttonToggle.classList.remove('btn-toggle-green');
             break;
         case 'section-acerca':
             menu.classList.add('navbar-green');
             logo.classList.add('navbar-green');
-            console.log("acerca");
+            buttonToggle.classList.add('btn-toggle-green');
+            
             break;
         case 'section-productos':
             menu.classList.add('navbar-green');
             logo.classList.add('navbar-green');
-            console.log("productos");
+            buttonToggle.add('btn-toggle-green');
+            buttonToggle.classList.remove('btn-toggle-green');
             break;
         case 'section-sustentabilidad':
             menu.classList.add('navbar-white');
             logo.classList.add('navbar-white');
-            console.log("productos");
+            buttonToggle.classList.remove('btn-toggle-green');
             break;
         case 'section-contacto':
             menu.classList.add('navbar-white');
             logo.classList.add('navbar-white');
-            console.log("contacto");
+            buttonToggle.classList.remove('btn-toggle-green');
             break;
     }    
 }
@@ -150,6 +152,7 @@ const detectarElement = () =>{
         
         menu.classList.add('navbar-white');
         logo.classList.add('navbar-white');
+        buttonToggle.classList.remove('btn-toggle-green');
 
     }else if (isInViewport(acerca)
     || isInViewport(misionVision)
@@ -157,6 +160,7 @@ const detectarElement = () =>{
         
         menu.classList.add('navbar-green');
         logo.classList.add('navbar-green');
+        buttonToggle.classList.add('btn-toggle-green');
 
     }  
 }
